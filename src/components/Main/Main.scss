@@ -1,0 +1,57 @@
+@import '../../styles/_base';
+
+.Main {
+    height: calc(100vh - 84px - 84px);
+    padding-bottom: 84px;
+    display: flex;
+    .content-container {
+        align-self: center;
+        width: 50%;
+        .main-title, .description, .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        .main-title {
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2vw;
+            h1 {
+                text-align: center;
+                margin-top:0;
+                font-weight: 100;
+            }
+        }
+        .description {
+            font-size: 20px;
+            @include purple-gradient-text();
+        }
+        .button-container {
+            margin-top: 50px;
+            button {
+                background-color: $dark-purple;
+                @include transition-background-color(0.3s);
+            }
+            button:hover {
+                background-color: lighten($dark-purple, 10%);
+                @include transition-background-color(0.3s);
+            }
+        }
+    }
+
+    .side-text-portfolio {
+        font-size: 36px;
+        width: 10%;
+        text-align: center;
+        align-self: center;
+        @include purple-gradient-text();
+    }
+
+    .img-container {
+        display: flex;
+        align-items: flex-end;
+        width: 40%;
+        justify-content: center;
+    }
+}

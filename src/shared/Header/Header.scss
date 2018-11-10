@@ -1,0 +1,28 @@
+@import '../../styles/_base';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    
+    .homeLink {
+        font-size: 20px;
+    }
+    .homeLink span {
+        padding: 30px 10px;
+    }
+    
+    .navLinks span {
+        padding: 20px 10px;
+    }
+    .homeLink span a:hover, .navLinks span a:hover {
+        color: lighten($dark-purple, 20%);
+    }
+    .hamburger-logo {
+        display: none;
+    }
+}
+
+.Header > div {
+    display: flex;
+}

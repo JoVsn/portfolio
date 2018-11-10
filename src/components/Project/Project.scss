@@ -1,0 +1,17 @@
+.Project {
+    display: flex;
+    flex-wrap: wrap;
+    .img-container {
+        max-width: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+
+    }
+    .content-container {
+        max-width: 40%;
+        width: 40%;
+        padding: 0px 5%;
+    }
+}

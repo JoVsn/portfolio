@@ -1,0 +1,13 @@
+@mixin purple-gradient-text() {
+    background: -webkit-linear-gradient($dark-purple, $light-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin purple-gradient-background() {
+    background: -webkit-linear-gradient($dark-purple, $light-purple);
+}
+
+@mixin transition-background-color($time) {
+    transition: background-color $time;
+}
