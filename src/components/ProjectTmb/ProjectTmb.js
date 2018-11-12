@@ -15,7 +15,7 @@ class ProjectTmb extends Component {
     return (
       <div className="ProjectTmb">
         <Link to={{pathname: this.url, state: {title: this.title, imgSrc: this.imgSrc}}}>
-          <div className="project-container">
+          <div className="project-tmb-container">
             <span>{this.title}</span>
             <img className="main-img" src={this.imgSrc} alt="" />
           </div>

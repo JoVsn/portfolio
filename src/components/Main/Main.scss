@@ -3,10 +3,11 @@
 .Main {
     height: calc(100vh - 84px - 84px);
     padding-bottom: 84px;
+    position: relative;
     display: flex;
     .content-container {
         align-self: center;
-        width: 50%;
+        width: 100%;
         .main-title, .description, .button-container {
             width: 100%;
             display: flex;
@@ -16,7 +17,7 @@
         .main-title {
             font-size: 36px;
             text-transform: uppercase;
-            letter-spacing: 2vw;
+            letter-spacing: 1.5vw;
             h1 {
                 text-align: center;
                 margin-top:0;
@@ -46,12 +47,8 @@
         text-align: center;
         align-self: center;
         @include purple-gradient-text();
-    }
-
-    .img-container {
-        display: flex;
-        align-items: flex-end;
-        width: 40%;
-        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }

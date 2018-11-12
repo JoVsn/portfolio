@@ -3,8 +3,9 @@
     flex-wrap: wrap;
     min-height: calc(100vh - 84px);
     .img-container {
-        width: 50%;
-        max-width: 50%;
+        width: 40%;
+        max-width: 40%;
+        padding: 0 5%;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -23,21 +24,6 @@
         .resume {
             margin-top:20px;
             width: 100%;
-        }
-        .contact {
-            margin-top: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: stretch;
-            div {
-                 width: 48%;
-                 button {
-                     width: 100%;
-                     height: 100%;
-                 }
-            }
         }
     }
     .skills-content-container, .interests-content-container {

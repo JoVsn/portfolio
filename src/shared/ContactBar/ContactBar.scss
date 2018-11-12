@@ -1,0 +1,18 @@
+@import '../../styles/_base';
+
+.ContactBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 35%;
+
+    .logo-container {
+        width: 10%;
+        vertical-align: middle;
+        img {
+            width: 100%;
+        }
+    }
+
+}

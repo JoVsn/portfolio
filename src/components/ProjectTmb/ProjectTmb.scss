@@ -1,13 +1,13 @@
 .ProjectTmb {
         
-    width: 48%;
-    padding: 20px 1%;
+    width: 33.15%;
+    padding: 1px 0.075%;
 
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
 
-    .project-container {
+    .project-tmb-container {
 
         display: flex;
         align-items: center;
@@ -40,13 +40,13 @@
             cursor: pointer;
             span {
                 opacity: 1;
-                transition: opacity 0.7s;
+                transition: opacity 0.4s;
                 z-index: 999;
                 color: white;
             }
             &:after {
-                opacity: 0.4;
-                transition: opacity 0.7s;
+                opacity: 0.8;
+                transition: opacity 0.4s;
             }
         }
     }

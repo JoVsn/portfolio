@@ -18,11 +18,8 @@ class Main extends Component {
             <span>Web • Video Making • Photography</span>
           </div>
           <div className="button-container">
-            <a href="#works"><button>See my works</button></a>
+            <a href="#works"><button>Start the visit</button></a>
           </div>
-        </div>
-        <div className="img-container">
-          <img src="" alt="" />
         </div>
         <div className="side-text-portfolio">
           <span>ポ<br />ー<br />ト<br />フ<br />ォ<br />リ<br />オ</span>

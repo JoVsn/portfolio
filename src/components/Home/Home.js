@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import './Home.scss';
 
-import img_01 from '../../assets/imgs/01.jpg';
-import img_02 from '../../assets/imgs/02.jpg';
 
-import projects from '../../assets/datas/projects.json'
-
-import Main from '../Main/Main'
-import ProjectTmb from '../ProjectTmb/ProjectTmb'
+import Main from '../Main/Main';
+import ContactBar from '../../shared/ContactBar/ContactBar';
+import ProjectGallery from '../ProjectGallery/ProjectGallery';
 
 class Home extends Component {
 
@@ -15,13 +12,11 @@ class Home extends Component {
         return (
             <div className="Home">
                 <Main />
-                <div className="works" id="works">        
-                    <ProjectTmb title="Projet 1" imgSrc={img_01} />
-                    <ProjectTmb title="Projet 2" imgSrc={img_02} />
-                    <ProjectTmb title="Projet 1" imgSrc={img_02} />
-                    <ProjectTmb title="Projet 2" imgSrc={img_02} />
-
-                </div>
+                <h1>What can I do ?</h1>
+                <p>As a creative engineer, I can ...</p>
+                <ProjectGallery />
+                <h1>Works</h1>
+                <ContactBar />
             </div>
         );
     }

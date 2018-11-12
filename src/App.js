@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 import Header from './shared/Header/Header';
+import Footer from './shared/Footer/Footer';
 
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/project" component={Project} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </div>
     );
   };
