@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProjectGallery.scss'
-import { Link } from 'react-router-dom';
 
 import ProjectTmb from '../ProjectTmb/ProjectTmb';
 

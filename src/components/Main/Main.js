@@ -15,10 +15,10 @@ class Main extends Component {
             <h1> Jordan Vilsaint </h1>
           </div>
           <div className="description">
-            <span>Web • Video Making • Photography</span>
+            <span>Hello, I'm Jordan, a junior front-end developer, who does a lot of things.</span>
           </div>
           <div className="button-container">
-            <a href="#works"><button>Start the visit</button></a>
+            <a href="#works"><button>Scroll down</button></a>
           </div>
         </div>
         <div className="side-text-portfolio">

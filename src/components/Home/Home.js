@@ -12,10 +12,10 @@ class Home extends Component {
         return (
             <div className="Home">
                 <Main />
-                <h1>What can I do ?</h1>
-                <p>As a creative engineer, I can ...</p>
+                <p>Pluridisciplinarity warning !</p>
+                <p>On this portfolio, you will encounter various types of project, websites, video editing, motion design... but it's ok, just explore !</p>
                 <ProjectGallery />
-                <h1>Works</h1>
+                <h1>Other works</h1>
                 <ContactBar />
             </div>
         );
