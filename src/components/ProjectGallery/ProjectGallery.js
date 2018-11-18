@@ -15,11 +15,11 @@ class ProjectGallery extends Component {
       <div className="ProjectGallery" id="works">
         {/* <h1>Projects</h1> */}
         <div className="project-container">
-          <ProjectTmb title="GRDF - Internship" imgSrc={grdf_img} />
-          <ProjectTmb title="Mobilités Descartes" imgSrc={mobilites_img} />
-          <ProjectTmb title="Life" imgSrc={life_img} />
-          <ProjectTmb title="Muse" imgSrc={muse_img} />
-          <ProjectTmb title="Hoverboard 3000" imgSrc={hoverboard_img} />
+          <ProjectTmb title="GRDF - Internship" imgSrc={grdf_img} projectId="grdf"/>
+          <ProjectTmb title="Mobilités Descartes" imgSrc={mobilites_img} projectId="mobilites"/>
+          <ProjectTmb title="Life" imgSrc={life_img} projectId="life"/>
+          <ProjectTmb title="Hoverboard 3000" imgSrc={hoverboard_img} projectId="hoverboard"/>
+          <ProjectTmb title="Muse" imgSrc={muse_img} projectId="muse"/>
         </div>
       </div>
     );

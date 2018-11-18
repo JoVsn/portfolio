@@ -1,10 +1,51 @@
 [
     {
-        "id": "project_1",
-        "name": "Projet 1",
-        "imgSrc": "../../assets/imgs/02.jpg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "linkToCaption": "Lien vers la page Youtube",
-        "linkTo": "https://www.youtube.com/watch?v=L10plVUahsg"
+        "projectId": "grdf",
+        "name": "GRDF - Internship",
+        "year": "2018",
+        "technologies": "Angular, Ionic",
+        "description": "3 Months internship during which I worked on a mobile app, \"Pros du Gaz \", developed with Ionic framework. This helped me to get better skills in terms of front-end deveopment.",
+        "linkToCaption": ["Apple Store", "Google Play"],
+        "linkTo": ["https://itunes.apple.com/nz/app/grdf-pros-du-gaz/id1440042196?mt=8", "https://play.google.com/store/apps/details?id=fr.grdf.prosdugaz"]
+    },
+    
+    {
+        "projectId": "mobilites",
+        "name": "Mobilités Descartes",
+        "year": "2018",
+        "technologies": "Angular, Lumen (Laravel)",
+        "description": "A school project where we add to develop a carpooling web application for the students of the Campus Descartes (Université Paris-Est Marne-La-Vallée).",
+        "linkToCaption": ["Visit the website"],
+        "linkTo": ["https://mobilite-descartes.fr/"]
+    },
+    
+    {
+        "projectId": "life",
+        "name": "Life",
+        "year": "2018",
+        "technologies": "After Effects, Premiere Pro",
+        "description": "A title sequence for an eventual movie called \"Life\", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos",
+        "linkToCaption": ["Watch on YouTube"],
+        "linkTo": ["https://www.youtube.com/watch?v=ACfPy7o-Fnc"]
+    },
+    
+    {
+        "projectId": "hoverboard",
+        "name": "Hoverboard 3000",
+        "year": "2017",
+        "technologies": "After Effects",
+        "description": "A motion design project made to promote the new Hoverboard 3000. Basically a school project :).",
+        "linkToCaption": ["Watch on YouTube"],
+        "linkTo": ["https://www.youtube.com/watch?v=r_9sZUWzqMY"]
+    },
+    
+    {
+        "projectId": "muse",
+        "name": "Muse",
+        "year": "2016",
+        "technologies": "HTML, CSS, Javascript",
+        "description": "School project consisting in creating a showcase website for the artist of our choice, here, the group \"Muse\".",
+        "linkToCaption": ["Visit the website"],
+        "linkTo": [""]
     }
 ]

@@ -1,17 +1,44 @@
+@import '../../styles/_base';
 .Project {
+    padding: 0 8%;
     display: flex;
     flex-wrap: wrap;
-    .img-container {
-        max-width: 50%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-
+    .project-title {
+        width: 100%;
+        h2 {
+            font-weight: 100;
+            font-style: italic;
+        }
     }
-    .content-container {
-        max-width: 40%;
-        width: 40%;
-        padding: 0px 5%;
+    .img-container {
+        width: 70%;
+        height: 100%;
+        margin-top: 32px;
+        overflow: hidden;
+        -moz-box-shadow: 10px 10px 40px -20px #656565;
+        -webkit-box-shadow: 10px 10px 40px -20px #656565;
+        -o-box-shadow: 10px 10px 40px -20px #656565;
+        box-shadow: 10px 10px 40px -20px #656565;
+        filter: progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=40);
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        width: 100%;
+        margin-top: 32px;
+        .button-container {
+            margin-top: 32px;
+            display: flex;
+            button {
+                margin: 0 5px;
+                background-color: $dark-purple;
+                @include transition-background-color(0.3s);
+            }
+            button:hover {
+                background-color: lighten($dark-purple, 10%);
+                @include transition-background-color(0.3s);
+            }
+        }
     }
 }

@@ -60,3 +60,10 @@ a:hover {
 .strong {
     font-weight: bold;
 }
+
+ul {
+    padding: 0;
+    li {
+        list-style-type: none;
+    }
+}

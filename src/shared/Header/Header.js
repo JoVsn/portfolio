@@ -9,12 +9,12 @@ class Header extends Component {
     return (
       <nav className="Header">
         <div className="homeLink">
-            <span><Link to="/">Jordan Vilsaint</Link></span>
+            <span><Link to="/">Jo.</Link></span>
         </div>
 
         <div className="navLinks">
-          <span><Link to="/about">About</Link></span>
           <span><Link to="/#works">Works</Link></span>
+          <span><Link to="/about">About</Link></span>
         </div>
 
         <img src={Hamburger} className="hamburger-logo" alt="logo" />
