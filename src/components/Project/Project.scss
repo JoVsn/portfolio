@@ -3,6 +3,7 @@
     padding: 0 8%;
     display: flex;
     flex-wrap: wrap;
+    min-height: calc(100vh - 84px);
     .project-title {
         width: 100%;
         h2 {
@@ -38,6 +39,75 @@
             button:hover {
                 background-color: lighten($dark-purple, 10%);
                 @include transition-background-color(0.3s);
+            }
+        }
+    }
+    .ProjectNav {
+        margin-top: 32px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .Project {
+        .img-container {
+            width: 100%;
+            margin-top: 32px;
+        }
+        .content {
+            width: 100%;
+            margin-top: 32px;
+            .button-container {
+                flex-direction: column;
+                a {
+                    margin: 1vh 0;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .Project {
+        .img-container {
+            width: 100%;
+            margin-top: 32px;
+        }
+        .content {
+            width: 100%;
+            margin-top: 32px;
+            .button-container {
+                a {
+                    width: auto;
+                    margin: 0 0;
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .Project {
+        .img-container {
+            width: 100%;
+            margin-top: 32px;
+        }
+        .content {
+            width: 100%;
+            margin-top: 32px;
+            .button-container {
+                a {
+                    width: auto;
+                    margin: 0 0;
+                }
             }
         }
     }

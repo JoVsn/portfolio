@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router'
 import './Project.scss'
+import ProjectNav from '../ProjectNav/ProjectNav';
 
 import mobilites_img from '../../assets/imgs/mobilites.png';
 import grdf_img from '../../assets/imgs/grdf.png';
@@ -12,19 +14,51 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.project = projects.find((element) => {
-      return element.projectId === props.location.state.projectId;
+      return element.projectId === props.match.params.projectId;
     });
-    this.imgSrc = `${this.project.projectId}_img`;
-    this.imgs = {
-      "mobilites_img": mobilites_img,
-      "grdf_img": grdf_img,
-      "life_img": life_img,
-      "muse_img": muse_img,
-      "hoverboard_img": hoverboard_img
-    };
+    if (this.project) {
+      this.imgSrc = `${this.project.projectId}_img`;
+      this.imgs = {
+        "mobilites_img": mobilites_img,
+        "grdf_img": grdf_img,
+        "life_img": life_img,
+        "muse_img": muse_img,
+        "hoverboard_img": hoverboard_img
+      };
+      this.projectPosition = projects.findIndex((element) => {
+        return element.projectId === props.match.params.projectId;
+      });
+      this.previousProjectId = projects[this.projectPosition - 1] ? projects[this.projectPosition - 1].projectId : undefined;
+      this.nextProjectId = projects[this.projectPosition + 1] ? projects[this.projectPosition + 1].projectId : undefined;
+    }
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.project = projects.find((element) => {
+      return element.projectId === nextProps.match.params.projectId;
+    });
+    if (this.project) {
+      this.imgSrc = `${this.project.projectId}_img`;
+      this.imgs = {
+        "mobilites_img": mobilites_img,
+        "grdf_img": grdf_img,
+        "life_img": life_img,
+        "muse_img": muse_img,
+        "hoverboard_img": hoverboard_img
+      };
+      this.projectPosition = projects.findIndex((element) => {
+        return element.projectId === nextProps.match.params.projectId;
+      });
+      this.previousProjectId = projects[this.projectPosition - 1] ? projects[this.projectPosition - 1].projectId : undefined;
+      this.nextProjectId = projects[this.projectPosition + 1] ? projects[this.projectPosition + 1].projectId : undefined;
+    }
+  }
+
+  componentDidUpdate() {
     window.scrollTo(0, 0);
   }
 
@@ -42,6 +76,11 @@ class Project extends Component {
   }
 
   render() {
+    if (this.project === undefined) {
+      return (
+        <Redirect to="/project-not-found"></Redirect>
+      );
+    }
     return (
       <div className="Project">
         <div className="project-title">
@@ -57,6 +96,7 @@ class Project extends Component {
             {this.createLinks()}
           </div>
         </div>
+        <ProjectNav previousProjectId={this.previousProjectId} nextProjectId={this.nextProjectId} />
       </div>
     );
   }

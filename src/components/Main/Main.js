@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import textRotation from '../../scripts/textRotation';
+import loadMyScript from '../../scripts/textRotation';
 import './Main.scss';
 
 
@@ -11,7 +11,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-
+    loadMyScript();
   }
 
   render() {
@@ -42,7 +42,7 @@ class Main extends Component {
 
           <span
             className="txt-rotate"
-            data-period="1500"
+            data-period="1100"
             data-rotate='[ "Web development", "Video editing", "Motion design", "Graphism", "Creativity" ]'></span><span>.</span>
 
         </div>

@@ -1,12 +1,12 @@
 @import '../../styles/_base';
-
 .ContactBar {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 0 35%;
-
+    height: 100%;
+    align-self: flex-end;
     .logo-container {
         width: 10%;
         vertical-align: middle;
@@ -14,5 +14,41 @@
             width: 100%;
         }
     }
+}
 
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .ContactBar {
+        flex-direction: column;
+        padding: 0 45%;
+        .logo-container {
+            margin: 2vh 0;
+            width: 100%;
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .ContactBar {
+        flex-direction: initial;
+        padding: 0 25%;
+        .logo-container {
+            width: 10%;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .ContactBar {
+        flex-direction: initial;
+        padding: 0 35%;
+        .logo-container {
+            width: 10%;
+        }
+    }
 }

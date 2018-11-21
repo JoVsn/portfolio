@@ -1,6 +1,5 @@
 @import '_variables';
 @import '_mixins';
-
 button {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -9,7 +8,7 @@ button {
     border-color: unset;
     border-image: unset;
     border-radius: 1px;
-    padding: 15px 30px;    
+    padding: 15px 30px;
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
@@ -39,6 +38,9 @@ button {
             }
         }
     }
+    &:focus {
+        outline: 0;
+    }
 }
 
 p {
@@ -47,6 +49,9 @@ p {
 
 a {
     color: $dark-purple;
+    &:focus {
+        outline: 0;
+    }
 }
 
 a:hover {

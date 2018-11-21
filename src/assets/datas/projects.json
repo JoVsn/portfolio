@@ -5,7 +5,7 @@
         "year": "2018",
         "technologies": "Angular, Ionic",
         "description": "3 Months internship during which I worked on a mobile app, \"Pros du Gaz \", developed with Ionic framework. This helped me to get better skills in terms of front-end deveopment.",
-        "linkToCaption": ["Apple Store", "Google Play"],
+        "linkToCaption": ["AppStore", "Google Play"],
         "linkTo": ["https://itunes.apple.com/nz/app/grdf-pros-du-gaz/id1440042196?mt=8", "https://play.google.com/store/apps/details?id=fr.grdf.prosdugaz"]
     },
     
@@ -14,7 +14,7 @@
         "name": "Mobilités Descartes",
         "year": "2018",
         "technologies": "Angular, Lumen (Laravel)",
-        "description": "A school project where we add to develop a carpooling web application for the students of the Campus Descartes (Université Paris-Est Marne-La-Vallée).",
+        "description": "A school project where we had to develop a carpooling web application for the students of the Campus Descartes (Université Paris-Est Marne-La-Vallée).",
         "linkToCaption": ["Visit the website"],
         "linkTo": ["https://mobilite-descartes.fr/"]
     },
@@ -24,7 +24,7 @@
         "name": "Life",
         "year": "2018",
         "technologies": "After Effects, Premiere Pro",
-        "description": "A title sequence for an eventual movie called \"Life\", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos",
+        "description": "A title sequence for an eventual movie called \"Life\", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos.",
         "linkToCaption": ["Watch on YouTube"],
         "linkTo": ["https://www.youtube.com/watch?v=ACfPy7o-Fnc"]
     },

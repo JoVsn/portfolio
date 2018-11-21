@@ -1,21 +1,18 @@
 @import '../../styles/_base';
+/* Extra small devices (phones, 600px and down) */
+
 .Main {
-    height: calc(100vh - 84px - 84px);
-    padding-bottom: 84px;
     position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 8%;
+    min-height: calc(100vh - 84px);
+    flex-wrap: wrap;
     .main-content {
         align-self: center;
-        width: 40%;
-        .presentation-caption {
-            font-size: 36px;
-            width: 100%; // @include purple-gradient-text();
-        }
+        .presentation-caption {}
         .description-caption {
-            font-size: 16px;
-            margin-top: 64px;
+            margin-top: 32px;
             width: 100%;
         }
         .button-container {
@@ -34,14 +31,105 @@
         }
     }
     .side-content {
-        width: 50%;
+        font-size: 24px;
+    }
+    .side-text-portfolio {
+        display: none;
+        font-size: 36px;
+        width: 10%;
+        text-align: center;
         align-self: center;
-        font-size: 48px;
-        .txt-rotate {
-            margin-left: 15%;
-        }
+        @include purple-gradient-text();
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
 
-/*         &-container { // For vertical carousel text
+@media only screen and (max-width: 600px) {
+    .Main {
+        .main-content {
+            width: 100%;
+            .presentation-caption {
+                font-size: 24px;
+                width: 100%; // @include purple-gradient-text();
+            }
+            .description-caption {
+                font-size: 16px;
+                margin-top: 32px;
+                width: 100%;
+            }
+            .button-container {
+                margin-top: 32px;
+                width: 100%;
+            }
+        }
+        .side-content {
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+        }
+        .side-text-portfolio {}
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .Main {
+        .main-content {
+            width: 100%;
+            .presentation-caption {
+                font-size: 36px;
+                width: 100%; // @include purple-gradient-text();
+            }
+            .description-caption {
+                font-size: 16px;
+                margin-top: 32px;
+                width: 100%;
+            }
+            .button-container {
+                margin-top: 32px;
+                width: 100%;
+            }
+        }
+        .side-content {
+            width: 100%;
+            height: 100%;
+            font-size: 48px;
+        }
+        .side-text-portfolio {}
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 992px) {
+    .Main {
+        .main-content {
+            width: 40%;
+            .presentation-caption {
+                font-size: 36px;
+                width: 100%; // @include purple-gradient-text();
+            }
+            .description-caption {
+                font-size: 16px;
+                margin-top: 64px;
+                width: 100%;
+            }
+            .button-container {
+                margin-top: 32px;
+                width: 100%;
+            }
+        }
+        .side-content {
+            width: 50%;
+            align-self: center;
+            font-size: 48px;
+            .txt-rotate {
+                margin-left: 15%;
+            }
+            /*         &-container { // For vertical carousel text
             font-weight: 600;
             overflow: hidden;
             height: 40px;
@@ -59,22 +147,13 @@
                 }
             }
         } */
-    }
-    .side-text-portfolio {
-        display: none;
-        font-size: 36px;
-        width: 10%;
-        text-align: center;
-        align-self: center;
-        @include purple-gradient-text();
-        position: absolute;
-        right: 0;
-        top: 0;
+        }
+        .side-text-portfolio {}
     }
 }
 
+// --- 
 // --- Transition settings for vertical text carousel
-
 @-webkit-keyframes opacity {
     0%,
     100% {
