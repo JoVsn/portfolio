@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
 import './Home.scss';
 
 import Main from '../Main/Main';
@@ -22,7 +24,7 @@ class Home extends Component {
                 <Main />
                 <ProjectGallery />
 
-                <div className="other-works">
+                <Element name="works" className="other-works">
                     <h1>Others</h1>
                     <div className="other-projects-section">
                         <h2>Web Design</h2>
@@ -59,7 +61,7 @@ class Home extends Component {
                             <li><a href="https://soundcloud.com/user-358686712/traveler-journey" target="_blank" rel="noopener noreferrer"><strong>Traveler Journey</strong> | 2017 | FL Studio, Pro Tools</a></li>
                         </ul>
                     </div>
-                </div>
+                </Element>
 
                 <ContactBar />
             </div>

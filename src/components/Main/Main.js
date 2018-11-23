@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
 import loadMyScript from '../../scripts/textRotation';
 import './Main.scss';
 
@@ -26,7 +28,7 @@ class Main extends Component {
             <span>Prepare you to encounter various types of projects... but it's ok, just explore&nbsp;!</span>
           </div>
           <div className="button-container">
-            <a href="#works"><button>Scroll down</button></a>
+            <Link to="works" spy={true} smooth={true} duration={1200}><button>Scroll down</button></Link>
           </div>
         </div>
         <div className="side-content">
