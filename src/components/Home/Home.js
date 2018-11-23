@@ -12,6 +12,10 @@ import faible_puissant_file from '../../assets/files/faible_puissant.pdf';
 
 class Home extends Component {
 
+    componentWillMount() {
+        document.title = "Jordan — Portfolio";
+    }
+
     render() {
         return (
             <div className="Home">
