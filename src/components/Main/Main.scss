@@ -1,6 +1,4 @@
 @import '../../styles/_base';
-/* Extra small devices (phones, 600px and down) */
-
 .Main {
     position: relative;
     display: flex;
@@ -32,6 +30,7 @@
     }
     .side-content {
         font-size: 24px;
+        position: relative;
     }
     .side-text-portfolio {
         display: none;
@@ -44,7 +43,17 @@
         right: 0;
         top: 0;
     }
+    .content-background {
+        position: absolute;
+        max-width: 100%;
+        img {
+            width: 100%;
+            opacity: 0.3;
+        }
+    }
 }
+
+/* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
     .Main {
@@ -70,6 +79,15 @@
             font-size: 24px;
         }
         .side-text-portfolio {}
+        .content-background {
+            position: absolute;
+            max-width: 100%;
+            img {
+                width: 100%;
+                opacity: 0.3;
+                bottom: 0;
+            }
+        }
     }
 }
 
@@ -99,6 +117,15 @@
             font-size: 48px;
         }
         .side-text-portfolio {}
+        .content-background {
+            position: absolute;
+            max-width: 100%;
+            img {
+                width: 100%;
+                opacity: 0.3;
+                bottom: 0;
+            }
+        }
     }
 }
 

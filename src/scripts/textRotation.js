@@ -53,7 +53,7 @@ const loadCall = () => {
   // INJECT CSS
   const css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #725070 }";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.02em solid #725070 }";
   document.body.appendChild(css);
 };
 

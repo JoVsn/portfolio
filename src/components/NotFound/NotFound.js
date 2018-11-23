@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import './NotFound.scss';
 
 class Home extends Component {
+
+  componentWillMount() {
+    document.title = 'Jordan — Page Not Found';
+  }
+
   render() {
     return (
       <div className="NotFound">

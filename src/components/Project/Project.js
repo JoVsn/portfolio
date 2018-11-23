@@ -33,6 +33,10 @@ class Project extends Component {
     }
   }
 
+  componentWillMount() {
+    document.title = `Jordan — ${this.project.name}`;
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -55,6 +59,7 @@ class Project extends Component {
       });
       this.previousProjectId = projects[this.projectPosition - 1] ? projects[this.projectPosition - 1].projectId : undefined;
       this.nextProjectId = projects[this.projectPosition + 1] ? projects[this.projectPosition + 1].projectId : undefined;
+      document.title = `Jordan — ${this.project.name}`;
     }
   }
 

@@ -27,6 +27,7 @@
                 position: absolute;
                 right: 3%;
                 top: 0;
+                cursor: pointer;
             }
             .homeLink,
             .navLink {
@@ -62,6 +63,7 @@
             float: right;
             height: 40px;
             padding: 1vh 0;
+            cursor: pointer;
         }
         &.responsive {
             position: relative;

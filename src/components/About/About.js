@@ -12,6 +12,10 @@ class About extends Component {
     this.imgSrc = props.imgSrc;
   }
 
+  componentWillMount() {
+    document.title = `Jordan — About`;
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0)
   }
