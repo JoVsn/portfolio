@@ -7,16 +7,44 @@ class TransitionHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true,
+      show: props.show,
+      reload: props.reload
     }
   }
 
   componentDidMount() {
-    console.log("mounted");
     this.timeoutId = setTimeout(function () {
-      this.setState({ show: false });
+      this.setState({
+        show: false,
+        reload: true
+      });
     }.bind(this), 800);
   }
+
+/*   static getDerivedStateFromProps(props, state) {
+    console.log(props);
+    console.log(state);
+
+    if (props.reload && state.reload && !state.show) {
+      console.log("reloaded");
+      return {
+        show: true,
+        reload: false
+      };
+    }
+    return null;
+  }
+
+  componentDidUpdate() {
+    if (this.state.show) {
+      this.timeoutId = setTimeout(function () {
+        this.setState({
+          show: false,
+          reload: true
+        });
+      }.bind(this), 800);
+    }
+  } */
 
   componentWillUnmount() {
     if (this.timeoutId) {

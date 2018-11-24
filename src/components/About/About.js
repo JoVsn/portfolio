@@ -17,7 +17,7 @@ class About extends Component {
   render() {
     return (
       <div className="About">
-        <TransitionHolder />
+        <TransitionHolder show={true} />
         <h1 className="mobile-title">About</h1>
         <div className="img-container">
           <img className="profile-img" src={profile_img} alt="Profile" />

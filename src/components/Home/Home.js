@@ -21,7 +21,7 @@ class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <TransitionHolder />
+                <TransitionHolder show={true} />
                 <Main />
                 <ProjectGallery className="works" />
 

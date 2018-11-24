@@ -18,7 +18,8 @@ class Project extends Component {
     this.state = {
       project: projects.find((element) => {
         return element.projectId === props.match.params.projectId;
-      })
+      }),
+      reload: false
     };
   }
 
@@ -35,7 +36,8 @@ class Project extends Component {
         return {
           project: projects.find((element) => {
             return element.projectId === props.match.params.projectId;
-          })
+          }),
+          reload: true
         }
       }
     }
@@ -93,7 +95,7 @@ class Project extends Component {
     }
     return (
       <div className="Project">
-        <TransitionHolder />
+        <TransitionHolder show={true} reload={this.state.reload}/>
         <div className="project-title">
           <h1>{this.state.project.name}</h1>
           <h2>{this.state.project.year} | {this.state.project.technologies}</h2>
