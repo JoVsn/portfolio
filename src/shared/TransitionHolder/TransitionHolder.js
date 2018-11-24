@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './TransitionHolder.scss';
-import transitionGif from '../../assets/animated/test.gif';
+import transitionGif from '../../assets/animated/towers.gif';
 
 class TransitionHolder extends Component {
   constructor(props) {
