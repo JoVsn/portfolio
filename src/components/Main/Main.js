@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import loadMyScript from '../../scripts/textRotation';
 import './Main.scss';
@@ -17,6 +17,14 @@ class Main extends Component {
     loadMyScript();
   }
 
+  scrollToWorks() {
+    scroller.scrollTo('works', {
+      duration: 1500,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+
   render() {
     return (
       <div className="Main">
@@ -28,7 +36,7 @@ class Main extends Component {
             <span>Prepare you to encounter various types of projects... but it's ok, just explore&nbsp;!</span>
           </div>
           <div className="button-container">
-            <Link to="works" spy={true} smooth={true} duration={1200}><button>Scroll down</button></Link>
+            <a to="works" onClick={() => this.scrollToWorks()}><button>Scroll down</button></a>
           </div>
         </div>
         <div className="side-content">

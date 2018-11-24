@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 import './Home.scss';
 
 import Main from '../Main/Main';
 import ContactBar from '../../shared/ContactBar/ContactBar';
 import ProjectGallery from '../ProjectGallery/ProjectGallery';
+import TransitionHolder from '../../shared/TransitionHolder/TransitionHolder';
 
 import la_kaz_file from '../../assets/files/la_kaz.pdf';
 import adaggio_file from '../../assets/files/adaggio.pdf';
@@ -14,17 +14,18 @@ import faible_puissant_file from '../../assets/files/faible_puissant.pdf';
 
 class Home extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
         document.title = "Jordan — Portfolio";
     }
 
     render() {
         return (
             <div className="Home">
+                <TransitionHolder />
                 <Main />
-                <ProjectGallery />
+                <ProjectGallery className="works" />
 
-                <Element name="works" className="other-works">
+                <div className="other-works">
                     <h1>Others</h1>
                     <div className="other-projects-section">
                         <h2>Web Design</h2>
@@ -61,7 +62,7 @@ class Home extends Component {
                             <li><a href="https://soundcloud.com/user-358686712/traveler-journey" target="_blank" rel="noopener noreferrer"><strong>Traveler Journey</strong> | 2017 | FL Studio, Pro Tools</a></li>
                         </ul>
                     </div>
-                </Element>
+                </div>
 
                 <ContactBar />
             </div>

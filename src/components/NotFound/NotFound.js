@@ -4,7 +4,7 @@ import './NotFound.scss';
 
 class Home extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     document.title = 'Jordan — Page Not Found';
   }
 

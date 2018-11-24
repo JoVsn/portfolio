@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import './Header.scss';
 import Hamburger from '../../assets/imgs/hamburger.png';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.addResponsiveClass = this.addResponsiveClass.bind(this);
-  }
-
   addResponsiveClass() {
     const x = document.querySelector(".Header");
     if (x.className === "Header") {
@@ -19,11 +15,20 @@ class Header extends Component {
     }
   }
 
+
+  scrollToWorks() {
+    scroller.scrollTo('works', {
+      duration: 1500,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+
   render() {
     return (
       <nav className="Header">
         <span className="homeLink"><Link to="/">Jo.</Link></span>
-        <span className="navLink"><Link to="/#works">Works</Link></span>
+        <span className="navLink"><Link to="/" onClick={() => this.scrollToWorks()}>Works</Link></span>
         <span className="navLink"><Link to="/about">About</Link></span>
 
         <img src={Hamburger} className="hamburger-logo" alt="logo" onClick={this.addResponsiveClass} />

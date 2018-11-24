@@ -7,49 +7,47 @@ import projects from '../../assets/datas/projects.json';
 class ProjectNav extends Component {
   constructor(props) {
     super(props);
-    this.previousProjectId = props.previousProjectId;
-    this.nextProjectId = props.nextProjectId;
-    this.urlPrev = `/project/${props.previousProjectId}`;
-    this.urlNext = `/project/${props.nextProjectId}`;
-
-    this.previousProject = projects.find((element) => {
-      return element.projectId === this.previousProjectId;
-    });
-    this.nextProject = projects.find((element) => {
-      return element.projectId === this.nextProjectId;
-    });
+    this.state = {
+      previousProject: projects.find((element) => {
+        return element.projectId === this.props.previousProjectId;
+      }),
+      nextProject: projects.find((element) => {
+        return element.projectId === this.props.nextProjectId;
+      })
+    };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.previousProjectId = nextProps.previousProjectId;
-    this.nextProjectId = nextProps.nextProjectId;
-    this.urlPrev = `/project/${nextProps.previousProjectId}`;
-    this.urlNext = `/project/${nextProps.nextProjectId}`;
+  static getDerivedStateFromProps(props, state) {
+    return {
+      previousProject: projects.find((element) => {
+        return element.projectId === props.previousProjectId;
+      }),
+      nextProject: projects.find((element) => {
+        return element.projectId === props.nextProjectId;
+      })
+    };
+  }
 
-    this.previousProject = projects.find((element) => {
-      return element.projectId === this.previousProjectId;
-    });
-    this.nextProject = projects.find((element) => {
-      return element.projectId === this.nextProjectId;
-    });
-
+  // Return project Url
+  getUrl(projectId) {
+    return `/project/${projectId}`;
   }
 
   render() {
     return (
       <div className="ProjectNav">
-        {this.previousProjectId !== undefined &&
+        {this.props.previousProjectId !== undefined &&
           <div className="previous-project">
-            <Link to={{ pathname: this.urlPrev }}>
-              <button className="button-bordered dark-purple">{"Previous project | "} <strong>{this.previousProject.name}</strong></button>
+            <Link to={{ pathname: this.getUrl(this.props.previousProjectId) }}>
+              <button className="button-bordered dark-purple">{"Previous project | "} <strong>{this.state.previousProject.name}</strong></button>
             </Link>
           </div>
         }
 
-        {this.nextProjectId !== undefined &&
+        {this.props.nextProjectId !== undefined &&
           <div className="next-project">
-            <Link to={{ pathname: this.urlNext}}>
-              <button className="button-bordered dark-purple">{"Next project | "} <strong>{this.nextProject.name}</strong></button>
+            <Link to={{ pathname: this.getUrl(this.props.nextProjectId) }}>
+              <button className="button-bordered dark-purple">{"Next project | "} <strong>{this.state.nextProject.name}</strong></button>
             </Link>
           </div>
         }

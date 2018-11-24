@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 import './About.scss'
+
+import TransitionHolder from '../../shared/TransitionHolder/TransitionHolder';
 import ContactBar from '../../shared/ContactBar/ContactBar';
 
 import profile_img from '../../assets/imgs/profile-min.png';
 import cv_file from '../../assets/files/cv.pdf';
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.title = props.title;
-    this.imgSrc = props.imgSrc;
-  }
-
-  componentWillMount() {
-    document.title = `Jordan — About`;
-  }
 
   componentDidMount() {
+    document.title = `Jordan — About`;
     window.scrollTo(0, 0)
   }
 
   render() {
     return (
       <div className="About">
+        <TransitionHolder />
         <h1 className="mobile-title">About</h1>
         <div className="img-container">
           <img className="profile-img" src={profile_img} alt="Profile" />
