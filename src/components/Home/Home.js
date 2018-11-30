@@ -46,7 +46,9 @@ class Home extends Component {
                     <div className="other-projects-section">
                         <h2>Video & Motion Design</h2>
                         <ul>
-                            <li><a href="https://www.youtube.com/watch?v=D-gO6o7oG_o" target="_blank" rel="noopener noreferrer"><strong>La Défense - Rêve Psyché</strong> | 2018 | After Effects, Sony Vegas</a></li>
+                            <li><a href="https://youtu.be/D-gO6o7oG_o" target="_blank" rel="noopener noreferrer"><strong>La Défense - Rêve Psyché</strong> | 2018 | After Effects, Sony Vegas</a></li>
+                            <li><a href="https://youtu.be/4xZ4OdotxTA" target="_blank" rel="noopener noreferrer"><strong>LEGO</strong> | 2018 | Sony Vegas, After Effects, 3DS Max</a></li>
+                            <li><a href="https://youtu.be/dxCK7rNngLM" target="_blank" rel="noopener noreferrer"><strong>Magman</strong> | 2018 | Sony Vegas, After Effects</a></li>
                             <li><a href="https://youtu.be/vxT3-irHST0" target="_blank" rel="noopener noreferrer"><strong>Wonder Woman</strong> | 2017 | After Effects</a></li>
                         </ul>
                     </div>
