@@ -1,0 +1,9 @@
+stages:
+  - build_stage
+
+build_app:
+  stage: build_stage
+  image: node:8.11.1
+  script: |
+    npm install
+    npm run build
