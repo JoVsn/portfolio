@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ProjectGallery.scss'
 
 import ProjectTmb from '../ProjectTmb/ProjectTmb';

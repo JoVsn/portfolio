@@ -36,7 +36,7 @@ class Main extends Component {
             <span>Prepare you to encounter various types of projects... but it's ok, just explore&nbsp;!</span>
           </div>
           <div className="button-container">
-            <a to="works" onClick={() => this.scrollToWorks()}><button>Scroll down</button></a>
+            <button to="works" onClick={() => this.scrollToWorks()}>Scroll down</button>
           </div>
         </div>
         <div className="side-content">
