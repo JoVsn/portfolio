@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 
 import './TransitionHolder.scss';
-import transitionGif from '../../assets/animated/towers.gif';
+import transitionGif from '../../assets/animated/final.gif';
 
 class TransitionHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: props.show,
-      reload: props.reload
+      show: props.show
     }
   }
 
   componentDidMount() {
     this.timeoutId = setTimeout(function () {
       this.setState({
-        show: false,
-        reload: true
+        show: false
       });
-    }.bind(this), 800);
+    }.bind(this), 950);
   }
 
 /*   static getDerivedStateFromProps(props, state) {

@@ -50,7 +50,7 @@ class Main extends Component {
           </div> */}
           <span
             className="txt-rotate"
-            data-period="1100"
+            data-period="900"
             data-rotate='[ "Web development", "Video editing", "Motion design", "Graphism", "Creativity" ]'></span><span>.</span>
 
         </div>

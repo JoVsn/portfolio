@@ -1,15 +1,31 @@
 .TransitionHolder {
     &.show {
+        z-index: 99999;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
         img {
-            z-index: 999999;
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
+            align-self: center;
         }
     }
     &.hide {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .TransitionHolder {
+        &.show {
+            img {
+                width: 50%;
+            }
+        }
+        &.hide {
+        }
     }
 }
