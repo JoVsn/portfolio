@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import loadMyScript from '../../scripts/textRotation';

@@ -3,7 +3,7 @@ class TxtRotate {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.period = parseInt(period, 10) || 900;
     this.txt = '';
     this.tick();
     this.isDeleting = false;
@@ -56,7 +56,5 @@ const loadCall = () => {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.02em solid #725070 }";
   document.body.appendChild(css);
 };
-
-const loadMyScript = () => window.addEventListener('load', () => loadCall());
 
 export default loadCall;

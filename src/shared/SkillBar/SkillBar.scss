@@ -1,0 +1,57 @@
+@import '../../styles/_base';
+.SkillBar {
+    margin-top: 2vh;
+    .jauge-border {
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: $dark-purple;
+        height: 2vh;
+        margin-top: 1vh;
+        .jauge-value {
+            background-color: $dark-purple;
+            height: 100%;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .SkillBar {
+        width: 90%;
+        padding-right: 10%;
+        .jauge-border {
+            width: 100%;
+            .jauge-value {
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .SkillBar {
+        width: 90%;
+        padding-right: 10%;
+        .jauge-border {
+            width: 100%;
+            .jauge-value {
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .SkillBar {
+        width: 45%;
+        padding-right: 5%;
+        .jauge-border {
+            width: 100%;
+            .jauge-value {
+            }
+        }
+    }
+}

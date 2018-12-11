@@ -25,7 +25,7 @@ class Project extends Component {
 
   componentDidMount() {
     if (this.state.project) {
-      document.title = `Jordan — ${this.state.project.name}`;
+      document.title = `Jordan Vilsaint — ${this.state.project.name}`;
       window.scrollTo(0, 0);
     }
   }
