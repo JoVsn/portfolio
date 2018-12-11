@@ -13,9 +13,3 @@ build_app:
     ls -R
     cp .htaccess build
 
-deploy_app:
-  stage: deploy_stage
-  script: |
-    sshpass -V
-    export SSHPASS=$USER_PASS
-    sshpass -e scp -o stricthostkeychecking=no -r directory-to-copy jovsn@ssh-jovsn.alwaysdata.net
