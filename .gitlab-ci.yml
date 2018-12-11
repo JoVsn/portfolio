@@ -10,6 +10,6 @@ build_app:
   script: |
     npm install
     npm run build
-    ls -R
+    ls ./build
     cp .htaccess build
 
