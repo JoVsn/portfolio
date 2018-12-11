@@ -11,6 +11,7 @@ build_app:
     npm install
     npm run build
     ls -R
+    cp .htaccess build
 
 deploy_app:
   stage: deploy_stage
