@@ -1,5 +1,9 @@
 stages:
   - build_stage
+  - deploy_stage
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sshpass
 
 build_app:
   stage: build_stage
@@ -7,3 +11,10 @@ build_app:
   script: |
     npm install
     npm run build
+
+deploy_app:
+  stage: deploy_stage
+  script: |
+    ls
+    sshpass -V
+    export SSHPASS=$USER_PASS
