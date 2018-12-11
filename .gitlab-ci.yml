@@ -12,4 +12,7 @@ build_app:
     npm run build
     ls ./build
     cp .htaccess build
+    sshpass -V
+    export SSHPASS=$USER_PASS
+    sshpass -e scp -o stricthostkeychecking=no -r . jovsn@ssh-jovsn.alwaysdata.net:/www
 
