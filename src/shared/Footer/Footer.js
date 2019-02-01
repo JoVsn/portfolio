@@ -5,7 +5,7 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer className="Footer">
-      <span>All rights reserved - Jordan VILSAINT © 2018</span>
+      <span>All rights reserved - Jordan VILSAINT © {(new Date()).getFullYear()}</span>
     </footer>
   );
 }

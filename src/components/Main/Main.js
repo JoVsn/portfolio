@@ -31,7 +31,7 @@ class Main extends Component {
       <div className="Main">
         <div className="main-content">
           <div className="presentation-caption">
-            <span>Hello, I'm Jordan, a junior front-end developer, who does a lot of things.</span>
+            <span>Hello, I'm Jordan, a junior full-stack developer, who does a lot of things.</span>
           </div>
           <div className="description-caption">
             <span>Prepare you to encounter various types of projects... but it's ok, just explore&nbsp;!</span>

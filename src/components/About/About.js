@@ -26,7 +26,7 @@ class About extends Component {
         <div className="presentation-content-container">
           <h1 className="desktop-title">About</h1>
           <p>Currently in my last year at the <a href="https://ingenieur-imac.fr/" className="strong">IMAC</a> (Image, Multimédia, Audiovisuel & Communication) Engineer School at Marne-La-Vallée.
-            and passionate by digital arts, I'm looking forward to be a modern front-end developer, and to be able to work on innovative and artistic projects !</p>
+            and passionate by digital arts, I'm looking forward to be a modern full-stack developer, and to be able to work on innovative and artistic projects !</p>
           <a href={cv_file} target="_blank" rel="noopener noreferrer"><button className="resume button-bordered button-icon dark-purple"><i className="fas fa-2x fa-file-alt dark-purple"></i><span>Resume</span></button></a>
         </div>
         <div className="skills">
