@@ -3,6 +3,7 @@ import './ProjectGallery.scss'
 
 import ProjectTmb from '../ProjectTmb/ProjectTmb';
 
+import shopping_img from '../../assets/imgs/mobilites.png';
 import mobilites_img from '../../assets/imgs/mobilites.png';
 import grdf_img from '../../assets/imgs/grdf.png';
 import life_img from '../../assets/imgs/life.png';
@@ -13,6 +14,7 @@ const ProjectGallery = () => {
   return (
     <div className="ProjectGallery" id="works">
       <div className="project-container">
+        <ProjectTmb title="Shopping Assistant" imgSrc={shopping_img} projectId="shopping" />
         <ProjectTmb title="GRDF - Internship" imgSrc={grdf_img} projectId="grdf" />
         <ProjectTmb title="Mobilités Descartes" imgSrc={mobilites_img} projectId="mobilites" />
         <ProjectTmb title="Life" imgSrc={life_img} projectId="life" />
