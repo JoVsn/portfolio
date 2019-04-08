@@ -6,7 +6,7 @@ before_script:
 
 build_app:
   stage: build_stage
-  image: node:6.10
+  image: node:8.11.1
   script: |
     npm install
     npm run build
