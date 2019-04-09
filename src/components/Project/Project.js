@@ -5,7 +5,7 @@ import './Project.scss'
 import ProjectNav from '../ProjectNav/ProjectNav';
 import TransitionHolder from '../../shared/TransitionHolder/TransitionHolder';
 
-import shopping_img from '../../assets/imgs/mobilites.png'; // Remplacer par Shopping Assistant
+import shopping_img from '../../assets/imgs/shopping.png'; // Remplacer par Shopping Assistant
 import mobilites_img from '../../assets/imgs/mobilites.png';
 import grdf_img from '../../assets/imgs/grdf.png';
 import life_img from '../../assets/imgs/life.png';

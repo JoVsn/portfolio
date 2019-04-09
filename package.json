@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gsap": "^2.1.2",
     "node-sass": "^4.9.4",
     "prerender-spa-plugin": "^3.4.0",
     "react": "^16.6.0",

@@ -25,7 +25,7 @@ class About extends Component {
         </div>
         <div className="presentation-content-container">
           <h1 className="desktop-title">About</h1>
-          <p>Currently in my last year at the <a href="https://ingenieur-imac.fr/" className="strong">IMAC</a> (Image, Multimédia, Audiovisuel & Communication) Engineer School at Marne-La-Vallée.
+          <p>Currently in my last year at the <a href="https://ingenieur-imac.fr/" target="_blank" className="strong">IMAC</a> (Image, Multimédia, Audiovisuel & Communication) Engineer School at Marne-La-Vallée.
             and passionate by digital arts, I'm looking forward to be a modern full-stack developer, and to be able to work on innovative and artistic projects !</p>
           <a href={cv_file} target="_blank" rel="noopener noreferrer"><button className="resume button-bordered button-icon dark-purple"><i className="fas fa-2x fa-file-alt dark-purple"></i><span>Resume</span></button></a>
         </div>
@@ -37,7 +37,7 @@ class About extends Component {
             <div className="skills-container-content">
               <SkillBar caption="HTML/CSS (Sass)" value={80} />
               <SkillBar caption="React, React Native" value={75} />
-              <SkillBar caption="Angular, Ionic" value={60} />
+              <SkillBar caption="Angular, Ionic" value={40} />
               <SkillBar caption="PHP, Laravel, Symfony" value={70} />
               <SkillBar caption="Firebase" value={20} />
               <SkillBar caption="Others (Node, ExpressJS, Mongo, Django...)" value={50} />

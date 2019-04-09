@@ -3,7 +3,7 @@ import './ProjectGallery.scss'
 
 import ProjectTmb from '../ProjectTmb/ProjectTmb';
 
-import shopping_img from '../../assets/imgs/mobilites.png';
+import shopping_img from '../../assets/imgs/shopping.png';
 import mobilites_img from '../../assets/imgs/mobilites.png';
 import grdf_img from '../../assets/imgs/grdf.png';
 import life_img from '../../assets/imgs/life.png';
