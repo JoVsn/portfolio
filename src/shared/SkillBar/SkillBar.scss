@@ -1,16 +1,54 @@
 @import '../../styles/_base';
+
 .SkillBar {
     margin-top: 2vh;
+
     .jauge-border {
         border-style: solid;
         border-width: 0.5px;
+        border-radius: 3px;
         border-color: $dark-purple;
-        height: 2vh;
+        height: 20px;
         margin-top: 1vh;
+        background-color: lighten($dark-purple, 50%);
+        position: relative;
+        background-blend-mode: difference;
+
         .jauge-value {
-            background-color: $dark-purple;
+            border-radius: 1px;
+            position: absolute;
             height: 100%;
+            background-color: $dark-purple;
         }
+
+        span {
+            position: absolute;
+            color: #fff;
+            visibility: hidden;
+            z-index: 9999;
+            font-weight: bold;
+        }
+
+        &:after {
+            position: absolute;
+            opacity: 0;
+            content: " ";
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.4s;
+        }
+
+        &:hover {
+            span {
+                visibility: visible;
+            }
+            &:after {
+                opacity: 0.3;
+                transition: opacity 0.4s;
+            }
+        }
+
     }
 }
 
@@ -20,10 +58,9 @@
     .SkillBar {
         width: 90%;
         padding-right: 10%;
+
         .jauge-border {
             width: 100%;
-            .jauge-value {
-            }
         }
     }
 }
@@ -34,10 +71,11 @@
     .SkillBar {
         width: 90%;
         padding-right: 10%;
+
         .jauge-border {
             width: 100%;
-            .jauge-value {
-            }
+
+            .jauge-value {}
         }
     }
 }
@@ -48,10 +86,11 @@
     .SkillBar {
         width: 45%;
         padding-right: 5%;
+
         .jauge-border {
             width: 100%;
-            .jauge-value {
-            }
+
+            .jauge-value {}
         }
     }
 }

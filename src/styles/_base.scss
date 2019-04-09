@@ -18,6 +18,7 @@ button {
         background-color: $base-background-color;
         border-style: solid;
         border-width: 1px;
+        border-radius: 3px;
         &.dark-purple {
             border-color: $dark-purple;
             @include transition-background-color(0.3s);

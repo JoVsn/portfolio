@@ -35,19 +35,20 @@ class About extends Component {
           <div className="skills-container">
             <h3>Web</h3>
             <div className="skills-container-content">
-              <SkillBar caption="HTML/CSS (Sass)" />
-              <SkillBar caption="React" />
-              <SkillBar caption="Angular" />
-              <SkillBar caption="PHP, Laravel, Symfony" />
-              <SkillBar caption="Others (Node, ExpressJS, Mongo, Django...)" />
+              <SkillBar caption="HTML/CSS (Sass)" value={80} />
+              <SkillBar caption="React, React Native" value={75} />
+              <SkillBar caption="Angular, Ionic" value={60} />
+              <SkillBar caption="PHP, Laravel, Symfony" value={70} />
+              <SkillBar caption="Firebase" value={20} />
+              <SkillBar caption="Others (Node, ExpressJS, Mongo, Django...)" value={50} />
             </div>
           </div>
 
           <div className="skills-container">
             <h3>Graphism & Video</h3>
             <div className="skills-container-content">
-              <SkillBar caption="Video editing (Vegas, Premiere Pro, After Effects)" />
-              <SkillBar caption="Graphism (Photoshop, Illustrator, Indesign)" />
+              <SkillBar caption="Video editing (Vegas, Premiere Pro, After Effects)" value={80} />
+              <SkillBar caption="Graphism (Photoshop, Illustrator, Indesign)" value={50} />
             </div>
           </div>
 
@@ -55,20 +56,20 @@ class About extends Component {
           <div className="skills-container">
             <h3>Methodology</h3>
             <div className="skills-container-content">
-              <SkillBar caption="UX Design" />
-              <SkillBar caption="Agile Methodology" />
+              <SkillBar caption="UX Design" value={60} />
+              <SkillBar caption="Agile Methodology" value={80} />
             </div>
           </div>
 
           <div className="skills-container">
             <h3>Languages</h3>
             <div className="skills-container-content">
-              <SkillBar caption="French" />
-              <SkillBar caption="English" />
-              <SkillBar caption="Spanish" />
-              <SkillBar caption="Italian" />
-              <SkillBar caption="Creole" />
-              <SkillBar caption="Japanese" />
+              <SkillBar caption="French" value={100} />
+              <SkillBar caption="English" value={85} />
+              <SkillBar caption="Spanish" value={55} />
+              <SkillBar caption="Italian" value={30} />
+              <SkillBar caption="Creole" value={98} />
+              <SkillBar caption="Japanese" value={10} />
             </div>
           </div>
           
