@@ -18,6 +18,12 @@ class Home extends Component {
         document.title = "Jordan Vilsaint — Web developer";
     }
 
+    createProjectLink = (link, projectName, date, techs) => {
+        return (
+            <a href={link} target="_blank" rel="noopener noreferrer"><strong>{projectName}</strong> | {date} | {techs}</a>
+        );
+    }
+
     render() {
         return (
             <div className="Home">
@@ -26,42 +32,46 @@ class Home extends Component {
                 <ProjectGallery className="works" />
 
                 <div className="other-works">
-                    <h1>Others</h1>
+                    <h1>More works ...</h1>
                     <div className="other-projects-section">
                         <h2>Web Design</h2>
                         <ul>
-                            <li><a href={adaggio_file} target="_blank" rel="noopener noreferrer"><strong>Adaggio Store</strong> | 2018 | Photoshop</a></li>
-                            <li><a href={la_kaz_file} target="_blank" rel="noopener noreferrer"><strong>La Kaz</strong> | 2018 | Photoshop</a></li>
+                            <li>{this.createProjectLink(adaggio_file, 'Adaggio Store', '2018', 'Photoshop')}</li>
+                            <li>{this.createProjectLink(la_kaz_file, 'La Kaz', '2018', 'Photoshop')}</li>
                         </ul>
                     </div>
                     <div className="other-projects-section">
                         <h2>Programming</h2>
                         <ul>
-                            <li><a href="https://github.com/JoVsn/captchaPokemon" target="_blank" rel="noopener noreferrer"><strong>CaptchaPokemon</strong> | 2018 | Java</a></li>
-                            <li><a href="https://github.com/oeuvrayjoris/pacman" target="_blank" rel="noopener noreferrer"><strong>PacBreak</strong> | 2018 | C++, OpenGL 3</a></li>
-                            <li><a href="https://github.com/JoVsn/pianobeep" target="_blank" rel="noopener noreferrer"><strong>Piano Beep</strong> | 2018 | C++</a></li>
-                            <li><a href="https://github.com/oeuvrayjoris/arkanopong" target="_blank" rel="noopener noreferrer"><strong>Arkanopong</strong> | 2017 | C, OpenGL 2</a></li>
+
+                            <li>{this.createProjectLink("https://github.com/JoVsn/captchaPokemon", 'Captcha Pokemon', '2018', 'Java')}</li>
+                            <li>{this.createProjectLink("https://github.com/oeuvrayjoris/pacman", 'PacBreak', '2018', 'C++, OpenGL 3')}</li>
+                            <li>{this.createProjectLink("https://github.com/JoVsn/pianobeep", 'Piano Beep', '2018', 'C++')}</li>
+                            <li>{this.createProjectLink("https://github.com/oeuvrayjoris/arkanopong", 'Arkanopong', '2017', 'C, OpenGL 2')}</li>
+
                         </ul>
                     </div>
                     <div className="other-projects-section">
                         <h2>Video & Motion Design</h2>
                         <ul>
-                            <li><a href="https://youtu.be/D-gO6o7oG_o" target="_blank" rel="noopener noreferrer"><strong>La Défense - Rêve Psyché</strong> | 2018 | After Effects, Sony Vegas</a></li>
-                            <li><a href="https://youtu.be/4xZ4OdotxTA" target="_blank" rel="noopener noreferrer"><strong>LEGO</strong> | 2018 | Sony Vegas, After Effects, 3DS Max</a></li>
-                            <li><a href="https://youtu.be/dxCK7rNngLM" target="_blank" rel="noopener noreferrer"><strong>Magman</strong> | 2018 | Sony Vegas, After Effects</a></li>
-                            <li><a href="https://youtu.be/vxT3-irHST0" target="_blank" rel="noopener noreferrer"><strong>Wonder Woman</strong> | 2017 | After Effects</a></li>
+
+                            <li>{this.createProjectLink("https://youtu.be/D-gO6o7oG_o", 'La Défense - Rêve Psyché', '2018', 'After Effects, Sony Vegas')}</li>
+                            <li>{this.createProjectLink("https://youtu.be/4xZ4OdotxTA", 'LEGO', '2018', 'Sony Vegas, After Effects, 3DS Max')}</li>
+                            <li>{this.createProjectLink("https://youtu.be/dxCK7rNngLM", 'Magman', '2018', 'Sony Vegas, After Effects')}</li>
+                            <li>{this.createProjectLink("https://youtu.be/vxT3-irHST0", 'Wonder Woman', '2017', 'After Effects')}</li>
+
                         </ul>
                     </div>
                     <div className="other-projects-section">
                         <h2>Graphism & Print</h2>
                         <ul>
-                            <li><a href={faible_puissant_file} target="_blank" rel="noopener noreferrer"><strong>Faible & Puissant</strong> | 2016 | Photoshop, Indesign</a></li>
+                            <li>{this.createProjectLink(faible_puissant_file, 'Faible & Puissant', '2016', 'Photoshop, Indesign')}</li>
                         </ul>
                     </div>
                     <div className="other-projects-section">
                         <h2>Music</h2>
                         <ul>
-                            <li><a href="https://soundcloud.com/user-358686712/traveler-journey" target="_blank" rel="noopener noreferrer"><strong>Traveler Journey</strong> | 2017 | FL Studio, Pro Tools</a></li>
+                            <li>{this.createProjectLink("https://soundcloud.com/user-358686712/traveler-journey", 'Traveler Journey', '2017', 'FL Studio, Pro Tools')}</li>
                         </ul>
                     </div>
                 </div>
