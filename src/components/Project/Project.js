@@ -79,12 +79,12 @@ class Project extends Component {
     // Create html links to the projects
     createLinks() {
         let res = [];
-        for (let i = 0; i < this.state.project.linkTo.length; i++) {
+        for (let i = 0; i < this.state.project.links.length; i++) {
             const elem =
                 (
-                    <a href={this.state.project.linkTo[i]} target="_blank" rel="noopener noreferrer" key={this.state.project.linkTo[i]}><button>{this.state.project.linkToCaption[i]}</button></a>
+                    <a href={this.state.project.links[i].link} target="_blank" rel="noopener noreferrer" key={this.state.project.links[i].link}><button>{this.state.project.links[i].caption}</button></a>
                 );
-            if (this.state.project.linkTo[i] !== '')
+            if (this.state.project.links[i].active === true)
                 res.push(elem);
         }
         return res;

@@ -5,57 +5,92 @@
         "year": "2019",
         "technologies": "React Native, Firebase",
         "description": "A school project during which I had to develop a Shopping Assistant application. A prototype version is available for android",
-        "linkToCaption": ["Visit the website", "Google Play"],
-        "linkTo": ["https://shopping-assistant.app", "https://play.google.com/store/apps"]
+        "links": [
+            {
+                "link": "https://shopping-assistant.app",
+                "caption": "Visit the website",
+                "active": true
+            },
+            {
+                "link": "https://play.google.com/store/apps",
+                "caption": "Google Play",
+                "active": false
+            }
+        ]
     },
-
     {
         "projectId": "grdf",
         "name": "GRDF - Internship",
         "year": "2018",
         "technologies": "Angular, Ionic",
         "description": "A 3 months internship during which I worked on a mobile app, \"Pros du Gaz \", developed with Ionic framework. This helped me to get better skills in terms of front-end development.",
-        "linkToCaption": ["AppStore", "Google Play"],
-        "linkTo": ["https://itunes.apple.com/nz/app/grdf-pros-du-gaz/id1440042196?mt=8", "https://play.google.com/store/apps/details?id=fr.grdf.prosdugaz"]
+        "links": [
+            {
+                "link": "https://itunes.apple.com/nz/app/grdf-pros-du-gaz/id1440042196?mt=8",
+                "caption": "AppStore",
+                "active": true
+            },
+            {
+                "link": "https://play.google.com/store/apps/details?id=fr.grdf.prosdugaz",
+                "caption": "Google Play",
+                "active": true
+            }
+        ]
     },
-    
     {
         "projectId": "mobilites",
         "name": "Mobilités Descartes",
         "year": "2018",
         "technologies": "Angular, Lumen (Laravel)",
         "description": "A school project where we had to develop a carpooling web application for the students of the Campus Descartes (Université Paris-Est Marne-La-Vallée).",
-        "linkToCaption": ["Visit the website"],
-        "linkTo": ["https://mobilite-descartes.fr/"]
+        "links": [
+            {
+                "link": "https://mobilite-descartes.fr/",
+                "caption": "Visit the website",
+                "active": false
+            }
+        ]
     },
-    
     {
         "projectId": "life",
         "name": "Life",
         "year": "2018",
         "technologies": "After Effects, Premiere Pro",
         "description": "A title sequence for an eventual movie called \"Life\", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos.",
-        "linkToCaption": ["Watch on YouTube"],
-        "linkTo": ["https://www.youtube.com/watch?v=ACfPy7o-Fnc"]
+        "links": [
+            {
+                "link": "https://www.youtube.com/watch?v=ACfPy7o-Fnc",
+                "caption": "Watch on YouTube",
+                "active": true
+            }
+        ]
     },
-    
     {
         "projectId": "hoverboard",
         "name": "Hoverboard 3000",
         "year": "2017",
         "technologies": "After Effects",
         "description": "A motion design project made to promote the new Hoverboard 3000. Basically a school project :).",
-        "linkToCaption": ["Watch on YouTube"],
-        "linkTo": ["https://www.youtube.com/watch?v=r_9sZUWzqMY"]
+        "links": [
+            {
+                "link": "https://www.youtube.com/watch?v=r_9sZUWzqMY",
+                "caption": "Watch on YouTube",
+                "active": true
+            }
+        ]
     },
-    
     {
         "projectId": "muse",
         "name": "Muse",
         "year": "2016",
         "technologies": "HTML, CSS, Javascript",
         "description": "School project consisting in creating a showcase website for the artist of our choice, here, the group \"Muse\".",
-        "linkToCaption": ["Visit the website"],
-        "linkTo": [""]
+        "links": [
+            {
+                "link": "",
+                "caption": "Visit the website",
+                "active": false
+            }
+        ]
     }
 ]
