@@ -21,7 +21,7 @@
     }
     .skills {
         width: 100%;
-        margin-top: 3vh;
+        margin: 3vh 0;
         &-container {
             margin-top: 5vh;
             h3 {
@@ -30,6 +30,7 @@
             &-content {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
         }
     }

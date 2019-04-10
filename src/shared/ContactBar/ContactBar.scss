@@ -1,17 +1,30 @@
 @import '../../styles/_base';
+
 .ContactBar {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0 35%;
+    margin: 40px 0;
     height: 100%;
-    align-self: flex-end;
-    .logo-container {
-        width: 10%;
-        vertical-align: middle;
-        img {
-            width: 100%;
+    padding: 0 8%;
+
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+
+        .logo-container {
+            width: 7%;
+            vertical-align: middle;
+            display: flex;
+
+            a {
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -20,11 +33,15 @@
 
 @media only screen and (max-width: 600px) {
     .ContactBar {
-        flex-direction: column;
-        padding: 0 45%;
-        .logo-container {
-            margin: 2vh 0;
+        .contact-container {
+
             width: 100%;
+            align-items: center;
+
+            .logo-container {
+                margin: 2vh 0;
+                width: 7%;
+            }
         }
     }
 }
@@ -33,10 +50,12 @@
 
 @media only screen and (min-width: 600px) {
     .ContactBar {
-        flex-direction: initial;
-        padding: 0 25%;
-        .logo-container {
-            width: 10%;
+        .contact-container {
+            flex-direction: initial;
+
+            .logo-container {
+                width: 10%;
+            }
         }
     }
 }
@@ -45,10 +64,12 @@
 
 @media only screen and (min-width: 992px) {
     .ContactBar {
-        flex-direction: initial;
-        padding: 0 35%;
-        .logo-container {
-            width: 10%;
+        .contact-container {
+            flex-direction: initial;
+
+            .logo-container {
+                width: 10%;
+            }
         }
     }
 }

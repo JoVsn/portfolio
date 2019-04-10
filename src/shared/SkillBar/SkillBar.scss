@@ -59,8 +59,7 @@
 
 @media only screen and (max-width: 600px) {
     .SkillBar {
-        width: 90%;
-        padding-right: 10%;
+        width: 100%;
 
         .jauge-border {
             width: 100%;
@@ -72,8 +71,7 @@
 
 @media only screen and (min-width: 600px) {
     .SkillBar {
-        width: 90%;
-        padding-right: 10%;
+        width: 100%;
 
         .jauge-border {
             width: 100%;
@@ -88,7 +86,6 @@
 @media only screen and (min-width: 992px) {
     .SkillBar {
         width: 45%;
-        padding-right: 5%;
 
         .jauge-border {
             width: 100%;
