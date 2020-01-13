@@ -1,0 +1,71 @@
+@import "../../styles/_base";
+
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+  .ContactBar {
+    margin: 40px 0;
+    padding: 0 8%;
+
+    .contact-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin: 0 auto;
+
+      .logo-container {
+        width: 7%;
+      }
+      a {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 600px) {
+  .ContactBar {
+    .contact-container {
+      justify-content: space-between;
+      width: 65%;
+      margin: 0;
+
+      /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+      .logo-container {
+        width: 10%;
+      }
+    }
+  }
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .ContactBar {
+    .contact-container {
+      justify-content: space-between;
+      width: 50%;
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 993px) {
+  /* big landscape tablets, laptops, and desktops */
+  .ContactBar {
+    .contact-container {
+      justify-content: space-between;
+      width: 35%;
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
