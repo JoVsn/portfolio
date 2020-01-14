@@ -5,7 +5,7 @@ import { TRANSITION_TIME } from "../constants";
 const useTransition = (dispatch) => {
     useEffect(() => {
         dispatch(showLoading());
-        document.title = "Jordan Vilsaint — Web developer";
+        document.title = "Jordan — Web developer";
         const id = setTimeout(() => dispatch(hideLoading()), TRANSITION_TIME);
         return () => clearTimeout(id);
     }, [dispatch]);

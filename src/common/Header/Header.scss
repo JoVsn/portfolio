@@ -97,6 +97,10 @@
     .Header {
         font-weight: 500;
         padding: 0px 3%;
+        .homeLink, .navLink {
+            position: relative;
+            z-index: 999;
+        }
         .homeLink {
             float: left;
             font-size: 20px;
