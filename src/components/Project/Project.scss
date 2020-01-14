@@ -33,11 +33,11 @@
             display: flex;
             button {
                 margin: 0 5px;
-                background-color: $dark-purple;
+                background-color: $color-secondary;
                 @include transition-background-color(0.3s);
             }
             button:hover {
-                background-color: lighten($dark-purple, 10%);
+                background-color: lighten($color-secondary, 10%);
                 @include transition-background-color(0.3s);
             }
         }

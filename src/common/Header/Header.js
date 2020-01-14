@@ -28,7 +28,8 @@ class Header extends Component {
   render() {
     return (
       <nav className="Header">
-        <span className="homeLink"><Link to="/">Jo.</Link></span>
+        <span className="homeLink"><Link to="/">Joordvn</Link></span>
+        <span className="navLink"><Link to="/about">Contact</Link></span>
         <span className="navLink"><Link to="/" onClick={() => this.scrollToWorks()}>Works</Link></span>
         <span className="navLink"><Link to="/about">About</Link></span>
 

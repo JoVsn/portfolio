@@ -11,7 +11,7 @@ const About = ({ dispatch }) => {
     useTransition(dispatch);
 
     useEffect(() => {
-        document.title = `Jordan Vilsaint — About`;
+        document.title = `Jordan — About`;
         window.scrollTo(0, 0);
     }, []);
 
@@ -29,10 +29,10 @@ const About = ({ dispatch }) => {
                 <div className="presentation-content-container">
                     <h1 className="desktop-title">About</h1>
                     <p>
-                        Being a creative engineer, passionate by digital arts
+                        Being an <strike>amazing</strike> creative engineer, passionate by digital arts
                         and audiovisual works, I'm looking forward to be a
                         modern numeric artist, and to be able to work on
-                        innovative projects !
+                        innovative projects.
                     </p>
                 </div>
             </div>

@@ -7,11 +7,8 @@ import ProjectNav from "./ProjectNav/ProjectNav";
 
 import shopping_img from "../../assets/imgs/shopping.png";
 import ecosystems_img from "../../assets/imgs/ecosystems.png";
-import mobilites_img from "../../assets/imgs/mobilites.png";
 import grdf_img from "../../assets/imgs/grdf.png";
 import life_img from "../../assets/imgs/life.png";
-import muse_img from "../../assets/imgs/muse.png";
-import hoverboard_img from "../../assets/imgs/hoverboard.png";
 
 import projects from "../../assets/datas/projects.json";
 
@@ -35,8 +32,8 @@ const Project = ({ dispatch, match }) => {
 
     useEffect(() => {
         document.title = project
-            ? `Jordan Vilsaint — ${project.name}`
-            : "Jordan Vilsaint";
+            ? `Jordan — ${project.name}`
+            : "Jordan";
     }, [project]);
 
     // Return the image corresponding to the current project
@@ -44,11 +41,8 @@ const Project = ({ dispatch, match }) => {
         const imgs = {
             shopping_img: shopping_img,
             ecosystems_img: ecosystems_img,
-            mobilites_img: mobilites_img,
             grdf_img: grdf_img,
             life_img: life_img,
-            muse_img: muse_img,
-            hoverboard_img: hoverboard_img
         };
         const imgSrc = `${project.projectId}_img`;
         return imgs[imgSrc];

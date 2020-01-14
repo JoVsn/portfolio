@@ -61,21 +61,6 @@ let projects = {
             }
         ]
     },
-    mobilites: {
-        projectId: "mobilites",
-        name: "Mobilités Descartes",
-        year: "2018",
-        technologies: "Angular, Lumen (Laravel)",
-        description:
-            "A school project where we had to develop a carpooling web application for the students of the Campus Descartes (Université Paris-Est Marne-La-Vallée).",
-        links: [
-            {
-                link: "https://mobilite-descartes.fr/",
-                caption: "Visit the website",
-                active: false
-            }
-        ]
-    },
     life: {
         projectId: "life",
         name: "Life",
@@ -91,36 +76,6 @@ let projects = {
             }
         ]
     },
-    hoverboard: {
-        projectId: "hoverboard",
-        name: "Hoverboard 3000",
-        year: "2017",
-        technologies: "After Effects",
-        description:
-            "A motion design project made to promote the new Hoverboard 3000. Basically a school project :).",
-        links: [
-            {
-                link: "https://www.youtube.com/watch?v=r_9sZUWzqMY",
-                caption: "Watch on YouTube",
-                active: true
-            }
-        ]
-    },
-    muse: {
-        projectId: "muse",
-        name: "Muse",
-        year: "2016",
-        technologies: "HTML, CSS, Javascript",
-        description:
-            'School project consisting in creating a showcase website for the artist of our choice, here, the group "Muse".',
-        links: [
-            {
-                link: "",
-                caption: "Visit the website",
-                active: false
-            }
-        ]
-    }
 };
 
 export function _getProjects () {
