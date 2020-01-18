@@ -1,7 +1,10 @@
-import { _getProjects,  } from "./_DATA.js";
+import { _getProjects, _getAptitudes } from "./_DATA.js";
 
 export const getInitialData = () => {
-    return Promise.all([_getProjects()]).then(([projects]) => ({
-        projects
-    }));
+    return Promise.all([_getProjects(), _getAptitudes()]).then(
+        ([projects, aptitudes]) => ({
+            projects,
+            aptitudes
+        })
+    );
 };

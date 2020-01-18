@@ -75,11 +75,33 @@ let projects = {
                 active: true
             }
         ]
-    },
+    }
 };
 
-export function _getProjects () {
+let aptitudes = {
+    development: {
+        title: "Web development",
+        description:
+            "Design and development of user-friendly responsive websites matching users expectations (sometimes)."
+    },
+    video: {
+        title: "Video making",
+        description: "Editing and post-production of various kinds of videos, trying to provide a fresh and overwhelming experience to the viewers. "
+    },
+    animation: {
+        title: "Animation",
+        description: "Motion design, animation for mobile and desktop loaders, and used to demonstrate ideas through videos."
+    }
+};
+
+export function _getProjects() {
     return new Promise((res, rej) => {
-      setTimeout(() => res({...projects}), 1250)
-    })
-  }
+        setTimeout(() => res({ ...projects }), 0);
+    });
+}
+
+export function _getAptitudes() {
+    return new Promise((res, rej) => {
+        setTimeout(() => res({ ...aptitudes }), 0);
+    });
+}

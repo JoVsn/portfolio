@@ -4,7 +4,7 @@
 @media only screen and (max-width: 600px) {
     .Header {
         font-weight: 500;
-        padding: 0px 3%;
+        padding: 0px 10%;
         .homeLink {
             float: left;
             font-size: 20px;
@@ -50,7 +50,7 @@
 @media only screen and (min-width: 600px) {
     .Header {
         font-weight: 500;
-        padding: 0px 3%;
+        padding: 0px 10%;
         .homeLink {
             float: left;
             font-size: 20px;
@@ -96,7 +96,8 @@
 @media only screen and (min-width: 992px) {
     .Header {
         font-weight: 500;
-        padding: 0px 3%;
+        padding: 20px 10%;
+        font-size: 1.2rem;
         .homeLink, .navLink {
             position: relative;
             z-index: 999;

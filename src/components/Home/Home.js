@@ -4,15 +4,15 @@ import { connect } from "react-redux";
 import "./Home.scss";
 
 import Main from "./Main/Main";
-import { ContactBar } from "../../common";
+import { Contact } from "../../common";
 
-import useTransition from "../../hooks/useTransition";
+import ProjectsDisplayer from "./ProjectsDisplayer/ProjectsDisplayer";
 
 const Home = () => {
     return (
         <div className="Home">
             <Main />
-            <ContactBar />
+            <ProjectsDisplayer />
         </div>
     );
 };

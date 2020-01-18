@@ -1,119 +1,82 @@
 .About {
     display: flex;
     flex-wrap: wrap;
-    min-height: calc(100vh - 84px);
-    padding: 0 8%;
-    h1 {
+    padding: 0 15%;
+    position: relative;
+    .separator {
         width: 100%;
+        margin-top: 128px;
+        content: "";
+        clear: both;
     }
-    .img-container {
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        position: relative;
+    .about-me-short-description {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 64px 0;
     }
-    .presentation-content-container {
-        .resume {
-            margin-top: 20px;
-            width: 100%;
+    .about-me-container {
+        .about-me-title {
+            font-size: 1.5rem;
+        }
+        .about-me-content {
+            display: flex;
+            margin-top: 24px;
+            .about-me-long-description {
+                margin: 0;
+                font-size: 1.2rem;
+                width: 60%;
+            }
         }
     }
-    .skills {
+
+    .aptitudes-container {
+        text-align: right;
         width: 100%;
-        margin: 3vh 0;
-        &-container {
-            margin-top: 5vh;
-            h3 {
-                margin-bottom: 0;
-            }
-            &-content {
+        .aptitudes-title {
+            font-size: 1.5rem;
+        }
+        .aptitudes-content {
+            margin: 16px 0;
+            .aptitudes-table-indexes {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: flex-end;
+                margin-top: 24px;
+                ul {
+                    display: flex;
+                    margin: 0;
+                    li {
+                        &:not(:last-child) {
+                            margin: 0 8px;
+                        }
+                        &:last-child {
+                            margin-left: 8px;
+                        }
+                        font-size: 1.5rem;
+                        white-space: nowrap;
+                        transition: all ease-in-out 0.25s;
+                        &:hover {
+                            cursor: pointer;
+                            color: #aaaaaa;
+                            transition: all ease-in-out 0.25s;
+                        }
+                        &.active {
+                            color: #00b2b2;
+                            font-weight: bold;
+                        }
+                    }
+                }
             }
-        }
-    }
-}
-
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-    .About {
-        .mobile-title {
-            display: initial;
-        }
-        .desktop-title {
-            display: none;
-        }
-        .img-container {
-            width: 100%;
-            img {
-                position: initial;
-                width: 100%;
-                height: 100%;
+            .aptitudes-table-content {
+                margin-top: 24px;
+                display: flex;
+                justify-content: flex-end;
+                .aptitudes-table-content-description {
+                    font-size: 1.2rem;
+                    max-width: 60%;
+                    margin: 0;
+                }
             }
-        }
-        .presentation-content-container {
-            width: 100%;
-            .resume {
-                margin-top: 20px;
-                width: 100%;
-            }
-        }
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 600px) {
-    .About {
-        .mobile-title {
-            display: initial;
-        }
-        .desktop-title {
-            display: none;
-        }
-        .img-container {
-            width: 100%;
-            img {
-                position: initial;
-                width: 100%;
-                height: 100%;
-            }
-        }
-        .presentation-content-container {
-            width: 100%;
-            .resume {
-                margin-top: 20px;
-                width: 100%;
-            }
-        }
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) {
-    .About {
-        h1 {}
-        .mobile-title {
-            display: none;
-        }
-        .desktop-title {
-            display: initial;
-        }
-        .img-container {
-            width: 40%;
-            img {
-                position: absolute;
-                width: 100%;
-                height: auto;
-            }
-        }
-        .presentation-content-container {
-            padding-left: 5%;
-            width: 55%;
         }
     }
 }

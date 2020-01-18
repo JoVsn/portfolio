@@ -7,10 +7,10 @@ import "./App.scss";
 import { Header, Footer, TransitionHolder } from "./common/";
 import { handleInitialData } from "./actions/shared";
 
-const App = props => {
+const App = ({ dispatch }) => {
     useEffect(() => {
-        props.dispatch(handleInitialData());
-    }, []);
+        dispatch(handleInitialData());
+    }, [dispatch]);
 
     return (
         <div className="App">

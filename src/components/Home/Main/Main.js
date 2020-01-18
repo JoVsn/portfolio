@@ -18,13 +18,10 @@ const Main = () => {
 
     return (
         <div className="Main">
-            <Particles params={params} className="particles-container" />
-            <div className="main-content particles-js">
+{/*             <Particles params={params} className="particles-container" />
+ */}            <div className="main-content particles-js">
                 <div className="presentation-caption">
-                    <span>
-                        Hello, I'm Jordan, a creative developer and digital
-                        artist.
-                    </span>
+                    <span>Hello, I'm a creative developer and a digital artist.</span>
                 </div>
                 <div className="scrolldown-action">
                     <span to="works" onClick={() => scrollToWorks()}>

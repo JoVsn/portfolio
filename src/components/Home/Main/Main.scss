@@ -2,8 +2,8 @@
 .Main {
     position: relative;
     display: flex;
-    padding: 0 8%;
-    min-height: calc(100vh - 84px);
+    padding: 0 15%;
+    min-height: calc(100vh - 84px - 40px);
     flex-wrap: wrap;
     .particles-container {
         width: 100%;
