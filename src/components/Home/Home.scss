@@ -1,50 +1,15 @@
 .Home {
-    .works {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .other-works {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 8%;
-        h1 {
-            width: 100%;
+    &.home-wrapper {
+        height: calc(100vh - 124px - 99px);
+        .home-main {
+            position: fixed;
+            height: calc(100vh - 124px - 99px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
-}
-
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-    .other-works {
-        margin-top: calc(6 * 8px);
-        .other-projects-section {
-            width: 100%;
-            padding: 1vh 0;
-        }
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 600px) {
-    .other-works {
-        margin-top: calc(6 * 8px);
-        .other-projects-section {
-            width: 100%;
-            padding: 1vh 0;
-        }
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) {
-    .other-works {
-        margin-top: calc(15 * 8px);
-        .other-projects-section {
-            width: 33.15%;
-            padding: 16px 0.075%;
-        }
+    .project-name-container{
+        padding: 0 15%;
     }
 }

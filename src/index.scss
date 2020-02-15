@@ -1,4 +1,5 @@
 @import 'styles/_base';
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 
 body {
   color: $color-secondary;
@@ -14,4 +15,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.fredericka{
+  font-family: 'Fredericka the Great',
 }

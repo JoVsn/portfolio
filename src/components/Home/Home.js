@@ -3,16 +3,17 @@ import { connect } from "react-redux";
 
 import "./Home.scss";
 
-import Main from "./Main/Main";
-import { Contact } from "../../common";
-
 import ProjectsDisplayer from "./ProjectsDisplayer/ProjectsDisplayer";
 
 const Home = () => {
     return (
-        <div className="Home">
-            <Main />
-            <ProjectsDisplayer />
+        <div className="Home home-wrapper">
+            <div className="home-main">
+                <div className="project-name-container">
+                    <h1>Project Name</h1>
+                </div>
+                <ProjectsDisplayer />
+            </div>
         </div>
     );
 };

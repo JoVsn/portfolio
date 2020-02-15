@@ -1,0 +1,40 @@
+.Project {
+    padding: 0 15%;
+    .separator {
+        width: 100%;
+        margin-top: 128px;
+        content: "";
+        clear: both;
+    }
+    h1 {
+        text-align: center;
+        margin: 64px 0;
+    }
+    .project-image-container {
+        width: 100%;
+        margin: 64px 0;
+
+        img {
+            width: 100%;
+        }
+    }
+    .project-description-container {
+        display: flex;
+        margin: 64px 0;
+        div {
+            width: 20%;
+            margin: 0 16px;
+            h2 {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+    .project-content-container {
+        width: 80%;
+        margin: 64px 0;
+        font-size: 1.2rem;
+    }
+}

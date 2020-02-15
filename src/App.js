@@ -7,14 +7,15 @@ import "./App.scss";
 import { Header, Footer, TransitionHolder } from "./common/";
 import { handleInitialData } from "./actions/shared";
 
-const App = ({ dispatch }) => {
+const App = ({ dispatch, loading }) => {
     useEffect(() => {
         dispatch(handleInitialData());
     }, [dispatch]);
 
+    if (loading) return <TransitionHolder />;
+
     return (
         <div className="App">
-            <TransitionHolder />
             <BrowserRouter>
                 <Header />
                 <Router />
@@ -24,4 +25,8 @@ const App = ({ dispatch }) => {
     );
 };
 
-export default connect()(App);
+const mapStateToProps = ({ loading }) => ({
+    loading
+});
+
+export default connect(mapStateToProps)(App);
