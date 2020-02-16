@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, createRef } from "react";
 import { connect } from "react-redux";
 import "./ProjectDisplayer.scss";
 
@@ -7,9 +7,16 @@ import { Link } from "react-router-dom";
 
 const ProjectsDisplayer = ({ projects }) => {
     const translateX = useRef(0);
+
+    const ref = createRef();
+
+    const [isScrolling, setIsScrolling] = useState(false);
+    const [clientX, setClientX] = useState(0);
+    const [scrollX, setScrollX] = useState(0);
+    /* 
     const isDown = useRef(false);
     let startX = useRef(0);
-    let scrollLeft = useRef(0);
+    let scrollLeft = useRef(0); */
 
     const exploreThroughProjectsOnScroll = event => {
         const projectsWrapper = document.querySelector(".ProjectDisplayer");
@@ -43,6 +50,25 @@ const ProjectsDisplayer = ({ projects }) => {
     };
 
     const handleMouseDown = e => {
+        console.log("fired")
+        setIsScrolling(true);
+        setClientX(e.clientX)
+    };
+
+    const handleMouseUp = () => {
+        setIsScrolling(false);
+    };
+
+    const handleMouseMove = e => {
+        console.log(isScrolling)
+        if (isScrolling) {
+            ref.current.scrollLeft = scrollX + e.clientX - clientX;
+            setScrollX(scrollX + e.clientX - clientX);
+            setClientX(e.clientX);
+        }
+    };
+
+    /*     const handleMouseDown = e => {
         const slider = document.querySelector("body");
         isDown.current = true;
         slider.classList.add("active");
@@ -88,26 +114,29 @@ const ProjectsDisplayer = ({ projects }) => {
         }
         translateX.current = newTranslateX;
         projectsWrapper.style.transform = `translateX(${-newTranslateX}px)`;
-    };
+    }; */
 
     useEffect(() => {
         const slider = document.querySelector("body");
-        window.addEventListener("wheel", exploreThroughProjectsOnScroll);
+        window.addEventListener("wheel", exploreThroughProjectsOnScroll);/* 
         slider.addEventListener("mousedown", handleMouseDown);
         slider.addEventListener("mouseup", handleMouseUp);
         slider.addEventListener("mouseleave", handleMouseLeave);
-        slider.addEventListener("mousemove", handleMouseMove);
+        slider.addEventListener("mousemove", handleMouseMove); */
         return () => {
-            window.removeEventListener("wheel", exploreThroughProjectsOnScroll);
+            window.removeEventListener("wheel", exploreThroughProjectsOnScroll);/* 
             slider.removeEventListener("mousedown", handleMouseDown);
             slider.removeEventListener("mouseup", handleMouseUp);
             slider.removeEventListener("mouseleave", handleMouseLeave);
-            slider.removeEventListener("mousemove", handleMouseMove);
+            slider.removeEventListener("mousemove", handleMouseMove); */
         };
     }, []);
 
     return (
-        <div className="ProjectDisplayer works">
+        <div className="ProjectDisplayer works" ref={ref}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}>
             {projects &&
                 Object.keys(projects).map(projectKey => {
                     const project = projects[projectKey];

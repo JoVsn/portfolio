@@ -9,7 +9,12 @@
             justify-content: center;
         }
     }
-    .project-name-container{
+    .project-name-container {
         padding: 0 15%;
+        h1 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
     }
 }
