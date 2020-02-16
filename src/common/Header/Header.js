@@ -29,7 +29,7 @@ class Header extends Component {
     return (
       <nav className="Header">
         <span className="homeLink"><Link to="/">Joordvn</Link></span>
-        <span className="navLink"><Link to="/works">Works</Link></span>
+        <span className="navLink"><Link to="/projects">Works</Link></span>
         <span className="navLink"><Link to="/about">About</Link></span>
 
         <img src={Hamburger} className="hamburger-logo" alt="logo" onClick={this.addResponsiveClass} />

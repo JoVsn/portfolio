@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 
 import "./Home.scss";
 
-import ProjectsDisplayer from "./ProjectsDisplayer/ProjectsDisplayer";
+import ProjectsSlider from "./ProjectsSlider/ProjectsSlider";
 
 const Home = () => {
     return (
@@ -16,7 +16,7 @@ const Home = () => {
                     </div>
                 </Fade>
                 <Fade>
-                    <ProjectsDisplayer />
+                    <ProjectsSlider />
                 </Fade>
             </div>
         </div>

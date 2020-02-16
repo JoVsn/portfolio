@@ -63,7 +63,7 @@ const Project = ({ dispatch, match, projects, loading }) => {
                         />
                         {project.type.toLowerCase() === "video" && (
                             <>
-                                <video autoplay={isPlaying} muted loop>
+                                <video autoPlay={isPlaying} muted loop>
                                     <source src={life_video} type="video/mp4" />
                                 </video>
 

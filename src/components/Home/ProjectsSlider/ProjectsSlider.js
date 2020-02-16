@@ -1,25 +1,18 @@
-import React, { useEffect, useRef, useState, createRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import "./ProjectDisplayer.scss";
+import "./ProjectsSlider.scss";
 
 import life_img from "../../../assets/imgs/life.png";
 import { Link } from "react-router-dom";
 
-const ProjectsDisplayer = ({ projects }) => {
+const ProjectsSlider = ({ projects }) => {
     const translateX = useRef(0);
-
-    const ref = createRef();
-
-    const [isScrolling, setIsScrolling] = useState(false);
-    const [clientX, setClientX] = useState(0);
-    const [scrollX, setScrollX] = useState(0);
-    /* 
     const isDown = useRef(false);
     let startX = useRef(0);
-    let scrollLeft = useRef(0); */
+    let scrollLeft = useRef(0);
 
     const exploreThroughProjectsOnScroll = event => {
-        const projectsWrapper = document.querySelector(".ProjectDisplayer");
+        const projectsWrapper = document.querySelector(".ProjectsSlider");
         const projectElements = document.querySelectorAll(".ProjectElement");
         const bodyElement = document.querySelector("body").getBoundingClientRect();
         const deltaY = event.deltaY;
@@ -50,25 +43,6 @@ const ProjectsDisplayer = ({ projects }) => {
     };
 
     const handleMouseDown = e => {
-        console.log("fired")
-        setIsScrolling(true);
-        setClientX(e.clientX)
-    };
-
-    const handleMouseUp = () => {
-        setIsScrolling(false);
-    };
-
-    const handleMouseMove = e => {
-        console.log(isScrolling)
-        if (isScrolling) {
-            ref.current.scrollLeft = scrollX + e.clientX - clientX;
-            setScrollX(scrollX + e.clientX - clientX);
-            setClientX(e.clientX);
-        }
-    };
-
-    /*     const handleMouseDown = e => {
         const slider = document.querySelector("body");
         isDown.current = true;
         slider.classList.add("active");
@@ -80,18 +54,19 @@ const ProjectsDisplayer = ({ projects }) => {
         isDown.current = false;
         slider.classList.remove("active");
     };
-    const handleMouseLeave = () => {
+    const handleMouseLeave = (e) => {
+        e.preventDefault();
         const slider = document.querySelector("body");
         isDown.current = false;
         slider.classList.remove("active");
     };
     const handleMouseMove = e => {
         const slider = document.querySelector("body");
-        if (!isDown.current) return;
         e.preventDefault();
+        if (!isDown.current) return;
         const x = e.pageX - slider.offsetLeft;
         const deltaX = -(x - startX.current.valueOf()) / 3; //scroll-fast
-        const projectsWrapper = document.querySelector(".ProjectDisplayer");
+        const projectsWrapper = document.querySelector(".ProjectsSlider");
         const projectElements = document.querySelectorAll(".ProjectElement");
         let newTranslateX = translateX.current.valueOf() + deltaX / 3;
         const lastElementPositionX =
@@ -114,29 +89,26 @@ const ProjectsDisplayer = ({ projects }) => {
         }
         translateX.current = newTranslateX;
         projectsWrapper.style.transform = `translateX(${-newTranslateX}px)`;
-    }; */
+    };
 
     useEffect(() => {
         const slider = document.querySelector("body");
-        window.addEventListener("wheel", exploreThroughProjectsOnScroll);/* 
+        window.addEventListener("wheel", exploreThroughProjectsOnScroll);
         slider.addEventListener("mousedown", handleMouseDown);
         slider.addEventListener("mouseup", handleMouseUp);
         slider.addEventListener("mouseleave", handleMouseLeave);
-        slider.addEventListener("mousemove", handleMouseMove); */
+        slider.addEventListener("mousemove", handleMouseMove);
         return () => {
-            window.removeEventListener("wheel", exploreThroughProjectsOnScroll);/* 
+            window.removeEventListener("wheel", exploreThroughProjectsOnScroll);
             slider.removeEventListener("mousedown", handleMouseDown);
             slider.removeEventListener("mouseup", handleMouseUp);
             slider.removeEventListener("mouseleave", handleMouseLeave);
-            slider.removeEventListener("mousemove", handleMouseMove); */
+            slider.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 
     return (
-        <div className="ProjectDisplayer works" ref={ref}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}>
+        <div className="ProjectsSlider works">
             {projects &&
                 Object.keys(projects).map(projectKey => {
                     const project = projects[projectKey];
@@ -200,4 +172,4 @@ const mapStateToProps = ({ projects }) => ({
     projects,
 });
 
-export default connect(mapStateToProps)(ProjectsDisplayer);
+export default connect(mapStateToProps)(ProjectsSlider);

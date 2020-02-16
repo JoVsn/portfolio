@@ -3,7 +3,7 @@ import React from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
 import "./Projects.scss";
-import ProjectsDisplayer from "../Home/ProjectsDisplayer/ProjectsDisplayer";
+import ProjectsDisplayer from "./ProjectsDisplayer/ProjectsDisplayer";
 
 const Projects = () => {
     return (
