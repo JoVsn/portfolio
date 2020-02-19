@@ -1,14 +1,9 @@
 .Home {
-    &.home-wrapper {
-        height: calc(100vh - 124px - 99px);
-        .home-main {
-            position: fixed;
-            height: calc(100vh - 124px - 99px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
+    height: calc(100vh - 124px - 99px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .project-name-container {
         padding: 0 15%;
         h1 {

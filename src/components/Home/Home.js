@@ -4,21 +4,19 @@ import Fade from "react-reveal/Fade";
 
 import "./Home.scss";
 
-import ProjectsSlider from "./ProjectsSlider/ProjectsSlider";
+import ProjectsDisplayer from '../Projects/ProjectsDisplayer/ProjectsDisplayer';
 
 const Home = () => {
     return (
-        <div className="Home home-wrapper">
-            <div className="home-main">
-                <Fade bottom delay>
+        <div className="Home">
+{/*                 <Fade bottom delay>
                     <div className="project-name-container">
                         <h1>Scroll to begin your journey through the projects.</h1>
                     </div>
+                </Fade> */}
+                <Fade bottom>
+                    <ProjectsDisplayer homepage />
                 </Fade>
-                <Fade>
-                    <ProjectsSlider />
-                </Fade>
-            </div>
         </div>
     );
 };

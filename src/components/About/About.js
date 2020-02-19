@@ -44,7 +44,7 @@ const About = ({ aptitudes }) => {
                 </div>
             </div>
             <Fade bottom>
-                <p className="about-me-short-description" id="about-me-short-description">
+                <p className="about-me-short-description">
                     I'm <b>Jordan</b>, an <strike>amazing</strike> French <i>creative engineer</i>.
                 </p>
             </Fade>

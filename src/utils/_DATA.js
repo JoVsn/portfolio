@@ -19,6 +19,7 @@ let projects = {
             type: "image",
             link: "",
         },
+        homepage: true
     },
 };
 
