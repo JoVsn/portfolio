@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 import "./About.scss";
 import { connect } from "react-redux";
 
@@ -27,9 +27,7 @@ const About = ({ aptitudes }) => {
                 <div className="main-content particles-js">
                     <Fade left>
                         <div className="presentation-caption">
-                            <span>
-                                Hello, I'm a creative developer and video maker.
-                            </span>
+                            <span>Hello, I'm a creative developer and video maker.</span>
                         </div>
                         <div className="scrolldown-action">
                             <LinkScroll
@@ -38,18 +36,16 @@ const About = ({ aptitudes }) => {
                                 smooth={true}
                                 offset={-70}
                                 duration={1500}
-                                to="about-me-short-description"
-                            >
-                                <span to="works">Get to know more</span>
+                                to="about-me-short-description">
+                                <span>Get to know more</span>
                             </LinkScroll>
                         </div>
                     </Fade>
                 </div>
             </div>
             <Fade bottom>
-                <p className="about-me-short-description">
-                    I'm <b>Jordan</b>, an <strike>amazing</strike> French{" "}
-                    <i>creative engineer</i>.
+                <p className="about-me-short-description" id="about-me-short-description">
+                    I'm <b>Jordan</b>, an <strike>amazing</strike> French <i>creative engineer</i>.
                 </p>
             </Fade>
 
@@ -60,12 +56,11 @@ const About = ({ aptitudes }) => {
                     <h1 className="about-me-title">What drives me</h1>
                     <div className="about-me-content">
                         <p className="about-me-long-description">
-                            Passionate by digital arts and audiovisual works,
-                            I'm looking forward to work on creative projects
-                            combining sounds, visual effects and animation.
-                            <br /> I expect to provide mind-blowing experiences
-                            through videos, websites and various visual
-                            projects.
+                            Passionate by digital arts and audiovisual works, I'm looking forward to
+                            work on creative projects combining sounds, visual effects and
+                            animation.
+                            <br /> I expect to provide mind-blowing experiences through videos,
+                            websites and various visual projects.
                         </p>
                     </div>
                 </Fade>
@@ -82,31 +77,25 @@ const About = ({ aptitudes }) => {
                         <Fade bottom>
                             <div className="aptitudes-table-indexes">
                                 <ul>
-                                    {Object.keys(aptitudes).map(key => (
+                                    {Object.keys(aptitudes).map(apKey => (
                                         <li
-                                            key={key}
-                                            onClick={handleChangeAptitude(key)}
-                                            className={
-                                                key === aptitudeKey
-                                                    ? "active"
-                                                    : ""
-                                            }
-                                        >
-                                            {aptitudes[key].title}
+                                            key={`index_${apKey}`}
+                                            onClick={handleChangeAptitude(apKey)}
+                                            className={apKey === aptitudeKey ? "active" : ""}>
+                                            {aptitudes[apKey].title}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         </Fade>
                         <div className="aptitudes-table-content">
-                            {Object.keys(aptitudes).map(key => (
-                                <Fade bottom when={key === aptitudeKey}>
+                            {Object.keys(aptitudes).map(apKey => (
+                                <Fade key={`content_${apKey}`} bottom when={apKey === aptitudeKey}>
                                     <div
                                         className={`aptitudes-table-content-description ${
-                                            key === aptitudeKey ? "active" : ""
-                                        }`}
-                                    >
-                                        <p>{aptitudes[key].description}</p>
+                                            apKey === aptitudeKey ? "active" : ""
+                                        }`}>
+                                        <p>{aptitudes[apKey].description}</p>
                                     </div>
                                 </Fade>
                             ))}
@@ -123,7 +112,7 @@ const About = ({ aptitudes }) => {
 };
 
 const mapStateToProps = ({ aptitudes }) => ({
-    aptitudes
+    aptitudes,
 });
 
 export default connect(mapStateToProps)(About);
