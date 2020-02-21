@@ -36,7 +36,7 @@
             bottom: 25%;
             opacity: 0;
             z-index: 3;
-            transition: all .5s ease-in-out;
+            transition: all .25s ease-in-out;
             text-transform: uppercase;
         }
         span {
@@ -49,7 +49,7 @@
             }
             .in-video {
                 opacity: 1;
-                transition: all .5s ease-in-out;
+                transition: all .25s ease-in-out;
             }
         }
 

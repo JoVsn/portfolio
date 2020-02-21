@@ -1,0 +1,17 @@
+.ScrollTopButton {
+    position: fixed;
+    bottom: 15vh;
+    right: 5%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    span {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        opacity: 0.6;
+        transition: opacity .25s ease-in-out;
+        &:hover {
+            opacity: 1;
+            transition: opacity .25s ease-in-out;
+        }
+    }
+}

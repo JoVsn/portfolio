@@ -105,7 +105,6 @@ const About = ({ aptitudes }) => {
             )}
 
             <div className="separator"></div>
-
             <Contact />
         </div>
     );

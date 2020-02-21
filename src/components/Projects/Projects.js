@@ -9,32 +9,23 @@ const Projects = () => {
     const [isMoreWorksActive, setMoreWorksActive] = useState(false);
 
     const toggleMoreWorks = isActive => event => setMoreWorksActive(isActive);
+    const changeWorksSectionCaption = !isMoreWorksActive ? "More works →" : "← Back";
 
     return (
         <div className="Projects">
-            {!isMoreWorksActive ? (
-                <>
-                    <Fade left>
-                        <div className="more-projects-container">
-                            <span onClick={toggleMoreWorks(true)}>More works →</span>
-                        </div>
-                    </Fade>
-                    <Fade bottom>
-                        <ProjectsDisplayer />
-                    </Fade>
-                </>
-            ) : (
-                <>
-                    <Fade bottom>
-                        <div className="more-projects-container">
-                            <span onClick={toggleMoreWorks(false)}>← Back</span>
-                        </div>
-                    </Fade>
-                    <Fade bottom>
-                        <ProjectsList />
-                    </Fade>
-                </>
-            )}
+            <Fade left>
+                <div className="more-projects-container">
+                    <span onClick={toggleMoreWorks(!isMoreWorksActive)}>
+                        {changeWorksSectionCaption}
+                    </span>
+                </div>
+            </Fade>
+            <Fade bottom when={isMoreWorksActive === false}>
+                {!isMoreWorksActive && <ProjectsDisplayer />}
+            </Fade>
+            <Fade bottom when={isMoreWorksActive === true}>
+                {isMoreWorksActive && <ProjectsList />}
+            </Fade>
         </div>
     );
 };

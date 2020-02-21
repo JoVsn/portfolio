@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import "./ProjectsDisplayer.scss";
 
@@ -6,7 +6,6 @@ import life_img from "../../../assets/imgs/life.png";
 import { Link } from "react-router-dom";
 
 const ProjectsDisplayer = ({ projects, homepage }) => {
-    console.log(homepage);
     return (
         <div className="ProjectsDisplayer">
             {projects &&

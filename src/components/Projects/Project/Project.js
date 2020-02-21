@@ -1,25 +1,20 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import Fade from "react-reveal/Fade";
-// eslint-disable-next-line
-import { animateScroll as scroll, scroller } from "react-scroll";
 
 import "./Project.scss";
 import life_img from "../../../assets/imgs/life.png";
 import life_video from "../../../assets/videos/life.mp4";
-import { Redirect } from "react-router-dom";
 
-const Project = ({ dispatch, match, projects, loading }) => {
-    const projectId = match.params.projectId;
-    const [project, setProject] = useState(null);
-    const isPlaying = useRef(false);
-
-    useEffect(() => {
-        if (projects) {
-            setProject(projects[projectId]);
+const Project = ({ project }) => {
+    const togglePlayVideo = play => {
+        const video = document.querySelector(".project-media-container video");
+        if (play) video.play();
+        else {
+            video.pause();
+            video.currentTime = 0;
         }
-        //console.log(projects[projectId]);
-    }, [projects]);
+    };
 
     const handleRedirection = url => event => window.open(url, "_blank");
 
@@ -58,12 +53,13 @@ const Project = ({ dispatch, match, projects, loading }) => {
                         onClick={handleRedirection(getRedirectLink(project.links).url)}>
                         <img
                             src={life_img}
-                            onMouseOver={() => (isPlaying.current = true)}
-                            onMouseOut={() => (isPlaying.current = false)}
+                            onMouseOver={() => togglePlayVideo(true)}
+                            onMouseOut={() => togglePlayVideo(false)}
+                            alt={project.id}
                         />
                         {project.type.toLowerCase() === "video" && (
                             <>
-                                <video autoPlay={isPlaying} muted loop>
+                                <video muted loop>
                                     <source src={life_video} type="video/mp4" />
                                 </video>
 
@@ -103,9 +99,8 @@ const Project = ({ dispatch, match, projects, loading }) => {
     );
 };
 
-const mapStateToProps = ({ loading, projects }) => ({
-    loading,
-    projects,
+const mapStateToProps = ({ projects }, { match }) => ({
+    project: projects[match.params.projectId],
 });
 
 export default connect(mapStateToProps)(Project);
