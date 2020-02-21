@@ -1,6 +1,4 @@
 .About {
-    display: flex;
-    flex-wrap: wrap;
     padding: 0 15%;
     position: relative;
     .separator {
@@ -12,7 +10,7 @@
     .about-me-main {
         position: relative;
         display: flex;
-        height: calc(100vh - 84px - 40px);
+        height: calc(100vh - 124px);
         flex-wrap: wrap;
         .particles-container {
             width: 100%;
@@ -117,4 +115,8 @@
             }
         }
     }
+}
+
+.strike {
+    text-decoration: line-through;
 }

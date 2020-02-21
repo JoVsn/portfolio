@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 import { Link as LinkScroll } from "react-scroll";
 import "./About.scss";
 import { connect } from "react-redux";
@@ -45,7 +45,8 @@ const About = ({ aptitudes }) => {
             </div>
             <Fade bottom>
                 <p className="about-me-short-description">
-                    I'm <b>Jordan</b>, an <strike>amazing</strike> French <i>creative engineer</i>.
+                    I'm <b>Jordan</b>, an <span className="strike">amazing</span> French{" "}
+                    <i>creative engineer</i>.
                 </p>
             </Fade>
 

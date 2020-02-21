@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 
 import "./Contact.scss";
 import github_img from "../../assets/imgs/github.png";
@@ -15,8 +15,7 @@ const Contact = () => {
                         <a
                             href="https://github.com/jovsn"
                             target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                            rel="noopener noreferrer">
                             <span>JoVsn</span>
                         </a>
                     </div>
@@ -25,8 +24,7 @@ const Contact = () => {
                         <a
                             href="https://www.youtube.com/channel/UCKrU6OwA0CZ1Hgc5CMgxltw"
                             target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                            rel="noopener noreferrer">
                             <span>Joordvn</span>
                         </a>
                     </div>

@@ -1,8 +1,9 @@
 .Projects {
-    min-height: calc(100vh - 124px - 99px);
+    min-height: calc(100vh - 124px - 99px - 128px);
+    padding: 64px 0;
     .more-projects-container {
         padding: 0 8%;
-        margin: 64px 0;
+        margin-bottom: 64px;
         span {
             cursor: pointer;
         }

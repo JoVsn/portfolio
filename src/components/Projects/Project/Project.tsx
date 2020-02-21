@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 
 import "./Project.scss";
 import life_img from "../../../assets/imgs/life.png";
@@ -8,9 +8,11 @@ import life_video from "../../../assets/videos/life.mp4";
 
 const Project = ({ project }) => {
     const togglePlayVideo = play => {
-        const video = document.querySelector(".project-media-container video");
-        if (play) video.play();
-        else {
+        const video: HTMLMediaElement | null = document.querySelector(
+            ".project-media-container video",
+        );
+        if (play && video) video.play();
+        else if (!play && video) {
             video.pause();
             video.currentTime = 0;
         }
@@ -90,7 +92,7 @@ const Project = ({ project }) => {
 
                 <Fade left>
                     <div className="project-content-container">
-                        {getLinksComponent(project.links)}
+                        {getLinksComponent()}
                         <p>{project.description}</p>
                     </div>
                 </Fade>
