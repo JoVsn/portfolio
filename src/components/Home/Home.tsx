@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Fade } from "react-reveal";
 
 import "./Home.scss";
@@ -15,15 +14,10 @@ const Home = () => {
                     </div>
                 </Fade> */}
             <Fade bottom>
-                <ProjectsDisplayer homepage />
+                <ProjectsDisplayer forHomepage />
             </Fade>
         </div>
     );
 };
 
-const mapStateToProps = ({ loading, project }) => ({
-    loading,
-    project,
-});
-
-export default connect(mapStateToProps)(Home);
+export default Home;

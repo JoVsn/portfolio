@@ -5,8 +5,13 @@ import { Fade } from "react-reveal";
 import "./Project.scss";
 import life_img from "../../../assets/imgs/life.png";
 import life_video from "../../../assets/videos/life.mp4";
+import { IMainProject } from "../../../models/project";
 
-const Project = ({ project }) => {
+interface IProps {
+    project: IMainProject;
+}
+
+const Project = ({ project }: IProps) => {
     const togglePlayVideo = play => {
         const video: HTMLMediaElement | null = document.querySelector(
             ".project-media-container video",
@@ -57,7 +62,7 @@ const Project = ({ project }) => {
                             src={life_img}
                             onMouseOver={() => togglePlayVideo(true)}
                             onMouseOut={() => togglePlayVideo(false)}
-                            alt={project.id}
+                            alt={project.projectId}
                         />
                         {project.type.toLowerCase() === "video" && (
                             <>
@@ -101,7 +106,7 @@ const Project = ({ project }) => {
     );
 };
 
-const mapStateToProps = ({ projects }, { match }) => ({
+const mapStateToProps = ({ projects }: { projects: IMainProject[] }, { match }) => ({
     project: projects[match.params.projectId],
 });
 

@@ -3,6 +3,8 @@ let projects = {
         projectId: "life",
         name: "Life",
         type: "Video",
+        genre: "Video",
+        isMain: true,
         client: "IMAC - School Project",
         tools: "Sony Vegas, After Effects, Premiere Pro",
         description:
@@ -15,11 +17,8 @@ let projects = {
                 priority: "mainLink"
             },
         ],
-        media: {
-            type: "image",
-            link: "",
-        },
-        homepage: true
+        baseImageUrl: "",
+        onHomepage: true
     },
 };
 

@@ -4,20 +4,28 @@ import "./ProjectsDisplayer.scss";
 
 import life_img from "../../../assets/imgs/life.png";
 import { Link } from "react-router-dom";
+import { IMainProject, IProject } from "../../../models/project";
 
-const ProjectsDisplayer = ({ projects, homepage }) => {
+interface IProps {
+    projects: IMainProject[];
+    forHomepage: boolean;
+}
+
+const ProjectsDisplayer = ({ projects, forHomepage }: IProps) => {
     return (
         <div className="ProjectsDisplayer">
             {projects &&
                 Object.keys(projects)
                     .filter(projectKey => {
-                        if (homepage && projects[projectKey].homepage === true) return projectKey;
-                        else if (homepage && projects[projectKey].homepage === false)
-                            return undefined;
+                        const onHomepage: boolean = projects[projectKey].onHomepage;
+                        console.log(forHomepage)
+                        console.log(onHomepage)
+                        if (forHomepage && onHomepage === true) return projectKey;
+                        else if (forHomepage && onHomepage === false) return undefined;
                         return projectKey;
                     })
                     .map(projectKey => {
-                        const project = projects[projectKey];
+                        const project: IMainProject = projects[projectKey];
                         return (
                             <div className={`ProjectElement`} key={projectKey}>
                                 <Link to={`/project/${projectKey}`}>
@@ -33,8 +41,14 @@ const ProjectsDisplayer = ({ projects, homepage }) => {
     );
 };
 
-const mapStateToProps = ({ projects }) => ({
-    projects,
-});
+const mapStateToProps = ({ projects }: { projects: IMainProject[] }) => {
+
+    const mainProjects: IMainProject[] = Object.values(projects).filter((project: IMainProject) => project.isMain)
+
+    return {
+
+        projects: mainProjects
+    }
+};
 
 export default connect(mapStateToProps)(ProjectsDisplayer);

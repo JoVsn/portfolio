@@ -5,9 +5,14 @@ import "./About.scss";
 import { connect } from "react-redux";
 
 import { Contact } from "../../common";
+import { IAptitude } from "../../models/aptitudes";
 
-const About = ({ aptitudes }) => {
-    const [aptitudeKey, setAptitudeKey] = useState("");
+interface IProps {
+    aptitudes: IAptitude[];
+}
+
+const About = ({ aptitudes } : IProps) => {
+    const [aptitudeKey, setAptitudeKey] = useState<string>("");
 
     useEffect(() => {
         document.title = `Jordan — About`;
@@ -111,7 +116,7 @@ const About = ({ aptitudes }) => {
     );
 };
 
-const mapStateToProps = ({ aptitudes }) => ({
+const mapStateToProps = ({ aptitudes } : {aptitudes: IAptitude[]}) => ({
     aptitudes,
 });
 

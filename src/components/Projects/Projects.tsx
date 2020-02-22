@@ -6,7 +6,7 @@ import ProjectsDisplayer from "./ProjectsDisplayer/ProjectsDisplayer";
 import ProjectsList from "./ProjectsList/ProjectsList";
 import { Link } from "react-router-dom";
 
-const Projects = () => {
+export const Projects = () => {
     return (
         <div className="Projects">
             <Fade>
@@ -20,8 +20,6 @@ const Projects = () => {
         </div>
     );
 };
-
-export default Projects;
 
 export const MoreProjects = () => {
     return (
