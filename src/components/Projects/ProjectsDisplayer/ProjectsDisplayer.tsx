@@ -4,7 +4,7 @@ import "./ProjectsDisplayer.scss";
 
 import life_img from "../../../assets/imgs/life.png";
 import { Link } from "react-router-dom";
-import { IMainProject, IProject } from "../../../models/project";
+import { IMainProject } from "../../../models/project";
 
 interface IProps {
     projects: IMainProject[];
@@ -15,20 +15,17 @@ const ProjectsDisplayer = ({ projects, forHomepage }: IProps) => {
     return (
         <div className="ProjectsDisplayer">
             {projects &&
-                Object.keys(projects)
-                    .filter(projectKey => {
-                        const onHomepage: boolean = projects[projectKey].onHomepage;
-                        console.log(forHomepage)
-                        console.log(onHomepage)
-                        if (forHomepage && onHomepage === true) return projectKey;
+                projects
+                    .filter((project: IMainProject) => {
+                        const onHomepage: boolean = project.onHomepage;
+                        if (forHomepage && onHomepage === true) return project;
                         else if (forHomepage && onHomepage === false) return undefined;
-                        return projectKey;
+                        return project;
                     })
-                    .map(projectKey => {
-                        const project: IMainProject = projects[projectKey];
+                    .map((project: IMainProject) => {
                         return (
-                            <div className={`ProjectElement`} key={projectKey}>
-                                <Link to={`/project/${projectKey}`}>
+                            <div className={`ProjectElement`} key={project.projectId}>
+                                <Link to={`/project/${project.projectId}`}>
                                     <div className="img-container img-hover-zoom--brightness">
                                         <img src={life_img} alt={project.name} />
                                         <span>{project.name}</span>
@@ -42,13 +39,13 @@ const ProjectsDisplayer = ({ projects, forHomepage }: IProps) => {
 };
 
 const mapStateToProps = ({ projects }: { projects: IMainProject[] }) => {
-
-    const mainProjects: IMainProject[] = Object.values(projects).filter((project: IMainProject) => project.isMain)
+    const mainProjects: IMainProject[] = Object.values(projects).filter(
+        (project: IMainProject) => project.isMain,
+    );
 
     return {
-
-        projects: mainProjects
-    }
+        projects: mainProjects,
+    };
 };
 
 export default connect(mapStateToProps)(ProjectsDisplayer);

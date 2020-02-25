@@ -106,8 +106,12 @@ const Project = ({ project }: IProps) => {
     );
 };
 
-const mapStateToProps = ({ projects }: { projects: IMainProject[] }, { match }) => ({
+const mapStateToProps = ({ projects }: { projects: IMainProject[] }, { match }) => {
+
+    console.log(projects)
+    console.log(match)
+    return {
     project: projects[match.params.projectId],
-});
+}};
 
 export default connect(mapStateToProps)(Project);
