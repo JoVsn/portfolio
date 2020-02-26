@@ -60,7 +60,7 @@ const Project = ({ project }: IProps) => {
                         className="project-media-container"
                         onClick={handleRedirection(getRedirectLink(project.links).url)}>
                         <img
-                            className="project-media-thumbnail"
+                            className="project-media-image"
                             src={life_img}
                             onMouseOver={() => togglePlayVideo(true)}
                             onMouseOut={() => togglePlayVideo(false)}

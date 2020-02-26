@@ -1,24 +1,19 @@
 .Project {
     .separator {
-        width: 100%;
-        margin-top: 128px;
         content: "";
         clear: both;
     }
     h1 {
-        text-align: center;
         margin: 64px 0;
     }
     .project-media-container {
-        width: 85%;
-        margin: 64px auto;
         position: relative;
         cursor: pointer;
-        .project-media-thumbnail {
-            width: 100%;
+        .project-media-image {
             opacity: 0.5;
             position: relative;
             z-index: 999;
+            width: 100%;
         }
         video {
             object-fit: cover;
@@ -37,24 +32,16 @@
             display: flex;
             align-items: center;
             position: absolute;
-            left: 32px;
-            bottom: 10%;
             opacity: 0;
             z-index: 3;
             transition: all 0.25s ease-in-out;
 
             .project-media-link-img {
-                height: 64px;
-                width: 64px;
-                margin-right: 8px;
-                object-fit: contain
-            }
-            .project-media-link-caption {
-                font-size: 1.5rem;
+                object-fit: contain;
             }
         }
         &:hover {
-            .project-media-thumbnail {
+            .project-media-image {
                 opacity: 0;
             }
             video {
@@ -67,37 +54,198 @@
             }
         }
     }
-
-    .project-links-container {
-        display: flex;
-        flex-direction: column;
-        .project-link {
-            cursor: pointer;
-        }
-    }
-    .project-description-container {
-        display: flex;
-        width: 80%;
-        margin: 64px auto;
-        div {
-            width: 20%;
-            margin: 0 16px;
-            h2 {
-                font-size: 1.3rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-        }
-    }
-    .project-content-container {
-        width: 80%;
-        margin: 64px auto;
-        font-size: 1.2rem;
-    }
 }
 
 .clear {
     width: 100%;
     clear: both;
+}
+
+@media (max-width: 575.98px) {}
+
+@media /* (min-width: 576px) and */ (max-width: 767.98px) {
+    .Project {
+        .separator {
+            margin: 64px 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 8px 0;
+        }
+        .project-media-container {
+            width: 100%;
+            margin: 16px auto;
+            .project-media-image {
+                width: 100%;
+            }
+
+            .project-media-link {
+                display: flex;
+                left: 5%;
+                bottom: 15%;
+
+                .project-media-link-img {
+                    height: 32px;
+                    width: 32px;
+                    margin-right: 8px;
+                    object-fit: contain;
+                }
+                .project-media-link-caption {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .project-links-container {
+            display: flex;
+            flex-direction: column;
+            .project-link {
+                cursor: pointer;
+            }
+        }
+        .project-description-container {
+            margin: 16px auto;
+            div {
+                width: auto;
+                padding: 0 5%;
+                h2 {
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .project-content-container {
+            margin: 64px auto;
+            font-size: 1rem;
+            padding: 0 5%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Project {
+        .separator {
+            margin: 64px 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 8px 0;
+        }
+        .project-media-container {
+            width: 100%;
+            margin: 16px auto;
+            .project-media-image {
+                width: 100%;
+            }
+
+            .project-media-link {
+                display: flex;
+                left: 32px;
+                bottom: 20%;
+
+                .project-media-link-img {
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 8px;
+                    object-fit: contain;
+                }
+                .project-media-link-caption {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .project-links-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .project-description-container {
+            display: flex;
+            width: 80%;
+            margin: 64px auto;
+            div {
+                width: 20%;
+                margin: 0 16px;
+                h2 {
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .project-content-container {
+            width: 80%;
+            margin: 64px auto;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .Project {
+        .separator {
+            width: 100%;
+            margin-top: 128px;
+        }
+        h1 {
+            text-align: center;
+            margin: 64px 0;
+        }
+        .project-media-container {
+            width: 85%;
+            margin: 64px auto;
+            .project-media-link {
+                left: 32px;
+                bottom: 10%;
+
+                .project-media-link-img {
+                    height: 64px;
+                    width: 64px;
+                    margin-right: 8px;
+                }
+                .project-media-link-caption {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .project-links-container {
+            display: flex;
+            flex-direction: column;
+            .project-link {
+                cursor: pointer;
+                margin: 16px 0;
+            }
+        }
+        .project-description-container {
+            display: flex;
+            width: 80%;
+            margin: 64px auto;
+            div {
+                width: 20%;
+                margin: 0 16px;
+                h2 {
+                    font-size: 1.3rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .project-content-container {
+            width: 80%;
+            margin: 64px auto;
+            font-size: 1.2rem;
+            padding: 0 5%;
+        }
+    }
 }

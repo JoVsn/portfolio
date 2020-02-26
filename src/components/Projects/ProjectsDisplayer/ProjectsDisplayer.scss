@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     .ProjectElement {
         position: relative;
-        width: 33.33%;
         .img-container {
             width: 100%;
             overflow: hidden;
@@ -21,13 +20,12 @@
                 transform: scale(1);
             }
             span {
-                font-size: 1.3rem;
                 color: white;
                 font-weight: bold;
                 opacity: 1;
                 position: absolute;
                 bottom: 20%;
-                transition: all .25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
         }
         &:hover {
@@ -41,7 +39,63 @@
                 }
                 span {
                     opacity: 0;
-                    transition: all .25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ProjectsDisplayer {
+        .ProjectElement {
+            width: 100%;
+            .img-container {
+                span {
+                    font-size: 1rem;
+                    bottom: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .ProjectsDisplayer {
+        .ProjectElement {
+            width: 50%;
+            .img-container {
+                span {
+                    font-size: 1.1rem;
+                    bottom: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .ProjectsDisplayer {
+        .ProjectElement {
+            width: 50%;
+            .img-container {
+                span {
+                    font-size: 1.2rem;
+                    bottom: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .ProjectsDisplayer {
+        .ProjectElement {
+            width: 33.33%;
+            .img-container {
+                span {
+                    font-size: 1.3rem;
+                    bottom: 20%;
                 }
             }
         }
