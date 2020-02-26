@@ -1,5 +1,4 @@
 .About {
-    padding: 0 15%;
     position: relative;
     .separator {
         width: 100%;
@@ -11,6 +10,7 @@
         position: relative;
         display: flex;
         height: calc(100vh - 124px);
+        padding: 0 15%;
         flex-wrap: wrap;
         .particles-container {
             width: 100%;
@@ -41,82 +41,115 @@
         font-size: 2rem;
         margin-top: 64px 0;
     }
+
     .about-me-container {
-        // height: 50vh;
-        .about-me-title {
-            font-size: 1.5rem;
-        }
-        .about-me-content {
-            display: flex;
-            margin-top: 24px;
-            .about-me-long-description {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        .about-me-text {
+            width: 50%;
+            padding-left: 8%;
+            padding-right: 2%;
+            margin: 16px 0;
+            .about-me-title {
+                font-size: 1.5rem;
+            }
+            .about-me-description {
+                display: flex;
+                margin-top: 24px;
                 margin: 0;
                 font-size: 1.2rem;
-                width: 60%;
             }
+        }
+        .about-me-image-container {
+            width: 40%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
         }
     }
 
     .aptitudes-container {
         text-align: right;
-        width: 100%;
-        // height: 50vh;
-        .aptitudes-title {
-            font-size: 1.5rem;
-        }
-        .aptitudes-content {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        .aptitudes-text {
+            width: 50%;
+            padding-left: 8%;
+            padding-left: 2%;
             margin: 16px 0;
-            .aptitudes-table-indexes {
-                display: flex;
-                justify-content: flex-end;
-                margin-top: 24px;
-                ul {
+            .aptitudes-title {
+                font-size: 1.5rem;
+            }
+            .aptitudes-content {
+                margin: 16px 0;
+                .aptitudes-table-indexes {
                     display: flex;
-                    margin: 0;
-                    li {
-                        &:not(:last-child) {
-                            margin: 0 8px;
-                        }
-                        &:last-child {
-                            margin-left: 8px;
-                        }
-                        font-size: 1.5rem;
-                        white-space: nowrap;
-                        transition: all ease-in-out 0.25s;
-                        &:hover {
-                            cursor: pointer;
-                            color: #aaaaaa;
+                    justify-content: flex-end;
+                    margin-top: 24px;
+                    ul {
+                        display: flex;
+                        margin: 0;
+                        li {
+                            &:not(:last-child) {
+                                margin: 0 8px;
+                            }
+                            &:last-child {
+                                margin-left: 8px;
+                            }
+                            font-size: 1.5rem;
+                            white-space: nowrap;
                             transition: all ease-in-out 0.25s;
-                        }
-                        &.active {
-                            color: #777777;
-                            font-weight: bold;
+                            &:hover {
+                                cursor: pointer;
+                                color: #aaaaaa;
+                                transition: all ease-in-out 0.25s;
+                            }
+                            &.active {
+                                color: #777777;
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
-            }
-            .aptitudes-table-content {
-                margin-top: 24px;
-                display: flex;
-                justify-content: flex-end;
-                position: relative;
-                .aptitudes-table-content-description {
-                    font-size: 1.2rem;
-                    max-width: 60%;
-                    position: absolute;
-                    display: none;
-                    &.active {
-                        display: initial;
-                    }
-                    p {
-                        margin: 0;
+                .aptitudes-table-content {
+                    margin-top: 24px;
+                    display: flex;
+                    justify-content: flex-end;
+                    position: relative;
+                    .aptitudes-table-content-description {
+                        font-size: 1.2rem;
+                        position: absolute;
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                        p {
+                            margin: 0;
+                        }
                     }
                 }
             }
         }
+        .aptitudes-image-container {
+            width: 40%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .about-me-contact {
+        padding: 0 8%;
     }
 }
 
 .strike {
     text-decoration: line-through;
+}
+
+.clear {
+    width: 100%;
+    clear: both;
 }

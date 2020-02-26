@@ -5,6 +5,7 @@ import { Fade } from "react-reveal";
 import "./Project.scss";
 import life_img from "../../../assets/imgs/life.png";
 import life_video from "../../../assets/videos/life.mp4";
+import playIcon from "../../../assets/imgs/play_icon.png";
 import { IMainProject } from "../../../models/project";
 
 interface IProps {
@@ -59,6 +60,7 @@ const Project = ({ project }: IProps) => {
                         className="project-media-container"
                         onClick={handleRedirection(getRedirectLink(project.links).url)}>
                         <img
+                            className="project-media-thumbnail"
                             src={life_img}
                             onMouseOver={() => togglePlayVideo(true)}
                             onMouseOut={() => togglePlayVideo(false)}
@@ -70,9 +72,10 @@ const Project = ({ project }: IProps) => {
                                     <source src={life_video} type="video/mp4" />
                                 </video>
 
-                                <span className="project-link in-video">
-                                    {getRedirectLink(project.links).caption}
-                                </span>
+                                <div className="project-media-link in-video">
+                                    <img className="project-media-link-img" src={playIcon} alt="Watch on Youtube" />
+                                    <span className="project-media-link-caption">{getRedirectLink(project.links).caption}</span>
+                                </div>
                             </>
                         )}
                     </div>
@@ -106,12 +109,8 @@ const Project = ({ project }: IProps) => {
     );
 };
 
-const mapStateToProps = ({ projects }: { projects: IMainProject[] }, { match }) => {
-
-    console.log(projects)
-    console.log(match)
-    return {
+const mapStateToProps = ({ projects }: { projects: IMainProject[] }, { match }) => ({
     project: projects[match.params.projectId],
-}};
+});
 
 export default connect(mapStateToProps)(Project);

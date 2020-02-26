@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 export const Projects = () => {
     return (
         <div className="Projects">
-            <Fade>
+{/*             <Fade>
                 <div className="more-projects-container">
                     <Link to="/more-projects">More works →</Link>
                 </div>
-            </Fade>
+            </Fade> */}
             <Fade bottom>
                 <ProjectsDisplayer />
             </Fade>

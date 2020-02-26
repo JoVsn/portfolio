@@ -14,9 +14,11 @@
         margin: 64px auto;
         position: relative;
         cursor: pointer;
-        img {
+        .project-media-thumbnail {
             width: 100%;
-            opacity: .5;
+            opacity: 0.5;
+            position: relative;
+            z-index: 999;
         }
         video {
             object-fit: cover;
@@ -28,31 +30,42 @@
             top: 0;
             left: 0;
             opacity: 0;
-            transition: all .5s ease-in-out;
-        }
-        .in-video {
-            position: absolute;
-            left: 32px;
-            bottom: 25%;
-            opacity: 0;
-            z-index: 3;
-            transition: all .25s ease-in-out;
-            text-transform: uppercase;
-        }
-        span {
-            font-size: 1.5rem;
-        }
-        &:hover {
-            video {
-                opacity: 1;
-                transition: all .5s ease-in-out;
-            }
-            .in-video {
-                opacity: 1;
-                transition: all .25s ease-in-out;
-            }
+            transition: all 0.5s ease-in-out;
         }
 
+        .project-media-link {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 32px;
+            bottom: 10%;
+            opacity: 0;
+            z-index: 3;
+            transition: all 0.25s ease-in-out;
+
+            .project-media-link-img {
+                height: 64px;
+                width: 64px;
+                margin-right: 8px;
+                object-fit: contain
+            }
+            .project-media-link-caption {
+                font-size: 1.5rem;
+            }
+        }
+        &:hover {
+            .project-media-thumbnail {
+                opacity: 0;
+            }
+            video {
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+            .project-media-link {
+                opacity: 1;
+                transition: all 0.25s ease-in-out;
+            }
+        }
     }
 
     .project-links-container {
