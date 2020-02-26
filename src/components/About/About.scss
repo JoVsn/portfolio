@@ -167,7 +167,7 @@
                         margin: 0;
                         span {
                             display: block;
-                            margin: 4px 0;
+                            margin: 12px 0;
                             font-size: 1.2rem;
                             width: auto;
                         }
@@ -263,9 +263,10 @@
                 }
                 .aptitudes-content {
                     .aptitudes-table-indexes {
+                        margin: 0;
                         margin-top: 24px;
                         display: flex;
-                        margin: 0;
+                        justify-content: flex-end;
                         span {
                             &:not(:last-child) {
                                 margin: 0 8px;
@@ -339,6 +340,10 @@
             .about-me-text {
                 width: 90%;
                 margin: 48px auto;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .about-me-title {
                     font-size: 1.5rem;
                 }
@@ -351,7 +356,7 @@
             }
             .about-me-image-container {
                 width: 100%;
-                height: 25vh;
+                height: 50vh;
             }
         }
 
@@ -362,6 +367,10 @@
             .aptitudes-text {
                 width: 90%;
                 margin: 48px auto;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .aptitudes-title {
                     font-size: 1.5rem;
                 }
@@ -377,7 +386,7 @@
                             &:last-child {
                                 margin-left: 8px;
                             }
-                            font-size: 1.2rem;
+                            font-size: 1.5rem;
                         }
                     }
                     .aptitudes-table-content {
@@ -398,7 +407,7 @@
             }
             .aptitudes-image-container {
                 width: 100%;
-                height: 25vh;
+                height: 50vh;
             }
         }
 
