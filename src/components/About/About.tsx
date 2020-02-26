@@ -93,16 +93,14 @@ const About = ({ aptitudes }: IProps) => {
                         <div className="aptitudes-content">
                             <Fade bottom>
                                 <div className="aptitudes-table-indexes">
-                                    <ul>
                                         {Object.keys(aptitudes).map(apKey => (
-                                            <li
+                                            <span
                                                 key={`index_${apKey}`}
                                                 onClick={handleChangeAptitude(apKey)}
                                                 className={apKey === aptitudeKey ? "active" : ""}>
                                                 {aptitudes[apKey].title}
-                                            </li>
+                                            </span>
                                         ))}
-                                    </ul>
                                 </div>
                             </Fade>
                             <div className="aptitudes-table-content"> 
@@ -131,7 +129,6 @@ const About = ({ aptitudes }: IProps) => {
                 </div>
             )}
 
-            <div className="separator"></div>
             <div className="about-me-contact">
                 <Contact />
             </div>
