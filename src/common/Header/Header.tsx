@@ -1,48 +1,54 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-// eslint-disable-next-line
-import { animateScroll as scroll, scroller } from "react-scroll";
+import React, { useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 
 import "./Header.scss";
-import Hamburger from "../../assets/imgs/hamburger.png";
+import "./luxbar.scss";
 
-class Header extends Component {
-    /*   addResponsiveClass() {
-    const x = document.querySelector(".Header");
-    if (x.className === "Header") {
-      x.className += " responsive";
-    } else {
-      x.className = "Header";
-    }
-  }
+const Header = () => {
+    const history = useHistory();
 
- */
-    scrollToWorks() {
-        scroller.scrollTo("works", {
-            duration: 1500,
-            delay: 0,
-            smooth: "easeInOutQuart",
+    useEffect(() => {
+        const unlisten = history.listen(() => {
+            const element: HTMLElement | null = document.querySelector(".luxbar-hamburger");
+            const checkbox: HTMLInputElement | null = document.querySelector(".luxbar-checkbox");
+            if (element && checkbox && checkbox.checked) element.click();
         });
-    }
+        return () => {
+            unlisten();
+        };
+    }, [history]);
 
-    render() {
-        return (
-            <nav className="Header">
-                <span className="homeLink">
-                    <Link to="/">Joordvn</Link>
-                </span>
-                <span className="navLink">
-                    <Link to="/projects">Works</Link>
-                </span>
-                <span className="navLink">
-                    <Link to="/about">About</Link>
-                </span>
+    const openMenu = e => {
+        const element: HTMLElement | null = document.querySelector(".luxbar-checkbox");
+        if (element) element.click();
+    };
 
-                {/*         <img src={Hamburger} className="hamburger-logo" alt="logo" onClick={this.addResponsiveClass} />*/}
-                <div style={{ clear: "both" }}></div>
-            </nav>
-        );
-    }
-}
+    return (
+        <header id="luxbar" className="luxbar-static">
+            <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
+            <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
+                <ul className="luxbar-navigation">
+                    <li className="luxbar-header">
+                        <Link to="/" className="luxbar-brand">
+                            Joordvn
+                        </Link>
+                        <div
+                            className="luxbar-hamburger luxbar-hamburger-spin"
+                            id="luxbar-hamburger"
+                            onClick={openMenu}>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li className="luxbar-item">
+                        <Link to="/projects">Works</Link>
+                    </li>
+                    <li className="luxbar-item">
+                        <Link to="/about">About</Link>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    );
+};
 
 export default Header;

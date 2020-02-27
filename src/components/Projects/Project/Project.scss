@@ -61,12 +61,73 @@
     clear: both;
 }
 
-@media (max-width: 575.98px) {}
-
-@media /* (min-width: 576px) and */ (max-width: 767.98px) {
+@media (max-width: 575.98px) {
     .Project {
+        min-height: calc(100vh - 99px - 58px);
         .separator {
+            margin-top: calc(96px + 58px);
+        }
+        h1 {
+            text-align: center;
+            margin: 8px 0;
+        }
+        .project-media-container {
+            width: 100%;
+            margin: 16px auto;
+            .project-media-image {
+                width: 100%;
+            }
+
+            .project-media-link {
+                display: flex;
+                left: 5%;
+                bottom: 15%;
+
+                .project-media-link-img {
+                    height: 32px;
+                    width: 32px;
+                    margin-right: 8px;
+                    object-fit: contain;
+                }
+                .project-media-link-caption {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .project-links-container {
+            display: flex;
+            flex-direction: column;
+            .project-link {
+                cursor: pointer;
+            }
+        }
+        .project-description-container {
+            margin: 16px auto;
+            div {
+                width: auto;
+                padding: 0 15% 0 5%;
+                h2 {
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .project-content-container {
             margin: 64px 0;
+            font-size: 1rem;
+            padding: 0 15% 0 5%;
+        }
+    }
+}
+
+@media  (min-width: 576px) and  (max-width: 767.98px) {
+    .Project {
+        min-height: calc(100vh - 99px - 58px);
+        .separator {
+            margin-top: calc(96px + 58px);
         }
         h1 {
             text-align: center;
@@ -126,8 +187,9 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .Project {
+        min-height: calc(100vh - 106px - 99px);
         .separator {
-            margin: 64px 0;
+            margin-top: calc(96px + 58px);
         }
         h1 {
             text-align: center;
@@ -189,6 +251,7 @@
 
 @media (min-width: 992px) {
     .Project {
+        min-height: calc(100vh - 106px - 99px);
         .separator {
             width: 100%;
             margin-top: 128px;

@@ -1,15 +1,58 @@
-.Projects {
-    min-height: calc(100vh - 124px - 99px - 128px);
-    padding: 64px 0;
-    .more-projects-container {
-        padding: 0 8%;
-        margin-bottom: 64px;
-        span {
-            cursor: pointer;
+@media (max-width: 575.98px) {
+    .Projects {
+        min-height: calc(100vh - 58px - 99px - 128px);
+        padding: calc(64px + 58px) 0 64px 0;
+        .more-projects-container {
+            padding: 0 8%;
+            margin-bottom: 64px;
+            span {
+                cursor: pointer;
+            }
         }
     }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .Projects {
+        min-height: calc(100vh - 58px - 99px - 128px);
+        padding: calc(64px + 58px) 0 64px 0;
+        .more-projects-container {
+            padding: 0 8%;
+            margin-bottom: 64px;
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Projects {
+        min-height: calc(100vh - 99px - 106px - 128px);
+        padding: 64px 0;
+        .more-projects-container {
+            padding: 0 8%;
+            margin-bottom: 64px;
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .Projects {
+        min-height: calc(100vh - 99px - 106px - 128px);
+        padding: 64px 0;
+        .more-projects-container {
+            padding: 0 8%;
+            margin-bottom: 64px;
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
 
 .separator {
     width: 100%;

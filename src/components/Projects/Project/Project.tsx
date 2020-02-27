@@ -73,8 +73,14 @@ const Project = ({ project }: IProps) => {
                                 </video>
 
                                 <div className="project-media-link in-video">
-                                    <img className="project-media-link-img" src={playIcon} alt="Watch on Youtube" />
-                                    <span className="project-media-link-caption">{getRedirectLink(project.links).caption}</span>
+                                    <img
+                                        className="project-media-link-img"
+                                        src={playIcon}
+                                        alt="Watch on Youtube"
+                                    />
+                                    <span className="project-media-link-caption">
+                                        {getRedirectLink(project.links).caption}
+                                    </span>
                                 </div>
                             </>
                         )}

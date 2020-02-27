@@ -8,11 +8,13 @@ import ProjectsDisplayer from "../Projects/ProjectsDisplayer/ProjectsDisplayer";
 const Home = () => {
     return (
         <div className="Home">
-            {/*                 <Fade bottom delay>
-                    <div className="project-name-container">
-                        <h1>Scroll to begin your journey through the projects.</h1>
-                    </div>
-                </Fade> */}
+            <Fade bottom delay>
+                <div className="home-cta-container">
+                    <span className="home-cta-caption">
+                        EXPLORE. DISCOVER. IMMERGE.
+                    </span>
+                </div>
+            </Fade>
             <Fade bottom>
                 <ProjectsDisplayer forHomepage />
             </Fade>

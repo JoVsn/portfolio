@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { Contact } from "../../common";
 import { IAptitude } from "../../models/aptitudes";
 import aboutMeImg from "../../assets/imgs/about-me.jpeg";
-import aptitudeImg from "../../assets/imgs/shinjuku.jpeg"
+import aptitudeImg from "../../assets/imgs/shinjuku.jpeg";
 
 interface IProps {
     aptitudes: IAptitude[];
@@ -93,17 +93,17 @@ const About = ({ aptitudes }: IProps) => {
                         <div className="aptitudes-content">
                             <Fade bottom>
                                 <div className="aptitudes-table-indexes">
-                                        {Object.keys(aptitudes).map(apKey => (
-                                            <span
-                                                key={`index_${apKey}`}
-                                                onClick={handleChangeAptitude(apKey)}
-                                                className={apKey === aptitudeKey ? "active" : ""}>
-                                                {aptitudes[apKey].title}
-                                            </span>
-                                        ))}
+                                    {Object.keys(aptitudes).map(apKey => (
+                                        <span
+                                            key={`index_${apKey}`}
+                                            onClick={handleChangeAptitude(apKey)}
+                                            className={apKey === aptitudeKey ? "active" : ""}>
+                                            {aptitudes[apKey].title}
+                                        </span>
+                                    ))}
                                 </div>
                             </Fade>
-                            <div className="aptitudes-table-content"> 
+                            <div className="aptitudes-table-content">
                                 {Object.keys(aptitudes).map(apKey => (
                                     <Fade
                                         key={`content_${apKey}`}
@@ -116,8 +116,8 @@ const About = ({ aptitudes }: IProps) => {
                                             <p>{aptitudes[apKey].description}</p>
                                         </div>
                                     </Fade>
-                                ))} 
-{/* 
+                                ))}
+                                {/* 
                                 <Fade bottom when={aptitudeKey}>
                                     <div className="aptitudes-table-content-description active">
                                         <p>{aptitudes[aptitudeKey].description}</p>
@@ -129,6 +129,11 @@ const About = ({ aptitudes }: IProps) => {
                 </div>
             )}
 
+            <div className="about-me-want-to-contact">
+                <Fade left>
+                <span>Want to contact me ?</span>
+                </Fade>
+            </div>
             <div className="about-me-contact">
                 <Contact />
             </div>

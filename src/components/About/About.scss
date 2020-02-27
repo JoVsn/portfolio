@@ -8,7 +8,6 @@
     .about-me-main {
         position: relative;
         display: flex;
-        height: calc(100vh - 124px);
         flex-wrap: wrap;
         .particles-container {
             width: 100%;
@@ -109,7 +108,8 @@
             margin-top: 64px;
         }
         .about-me-main {
-            padding: 0 10%;
+            padding: 58px 10% 0 10%;
+            height: calc(100vh - 58px);
             .particles-container {
             }
             .main-content {
@@ -194,8 +194,17 @@
             }
         }
 
+        .about-me-want-to-contact {
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            span {
+                font-size: 1.3rem;
+            }
+        }
         .about-me-contact {
-            margin: 64px 0;
+            margin-bottom: 64px;
             padding: 0 8%;
         }
     }
@@ -209,7 +218,8 @@
             margin-top: 64px;
         }
         .about-me-main {
-            padding: 0 10%;
+            padding: 58px 10% 0 10%;
+            height: calc(100vh - 58px);
             .particles-container {
             }
             .main-content {
@@ -299,8 +309,17 @@
             }
         }
 
+        .about-me-want-to-contact {
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            span {
+                font-size: 1.5rem;
+            }
+        }
         .about-me-contact {
-            margin: 64px 0;
+            margin-bottom: 64px;
             padding: 0 8%;
         }
     }
@@ -315,6 +334,7 @@
         }
         .about-me-main {
             padding: 0 10%;
+            height: calc(100vh - 106px);
             .particles-container {
             }
             .main-content {
@@ -339,7 +359,7 @@
             flex-direction: column;
             .about-me-text {
                 width: 90%;
-                margin: 48px auto;
+                margin: 0 auto;
                 height: 50vh;
                 display: flex;
                 flex-direction: column;
@@ -366,7 +386,7 @@
             flex-direction: column-reverse;
             .aptitudes-text {
                 width: 90%;
-                margin: 48px auto;
+                margin: 0 auto;
                 height: 50vh;
                 display: flex;
                 flex-direction: column;
@@ -411,10 +431,22 @@
             }
         }
 
-        .about-me-contact {
+        .about-me-want-to-contact {
+            background-color: #fff;
+            color: #000;
+            height: 15vh;
+            display: flex;
+            align-items: center;
             padding: 0 8%;
-            margin: 128px 0;
+            span {
+                font-size: 2rem;
+            }
         }
+        .about-me-contact {
+            margin: 64px 0 128px 0;
+            padding: 0 8%;
+        }
+        
     }
 }
 
@@ -427,6 +459,7 @@
         }
         .about-me-main {
             padding: 0 15%;
+            height: calc(100vh - 106px);
             .particles-container {
                 width: 100%;
                 height: calc(100% + 84px);
@@ -529,8 +562,19 @@
             }
         }
 
+        .about-me-want-to-contact {
+            background-color: #fff;
+            color: #000;
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            span {
+                font-size: 2rem;
+            }
+        }
         .about-me-contact {
-            margin: 128px 0;
+            margin: 64px 0 128px 0;
             padding: 0 8%;
         }
     }
