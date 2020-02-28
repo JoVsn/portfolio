@@ -11,7 +11,7 @@ const Home = () => {
             <Fade bottom delay>
                 <div className="home-cta-container">
                     <span className="home-cta-caption">
-                        EXPLORE. DISCOVER. IMMERGE.
+                        EXPLORE. DISCOVER. IMMERSE.
                     </span>
                 </div>
             </Fade>
