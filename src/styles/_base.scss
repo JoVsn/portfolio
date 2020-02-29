@@ -5,6 +5,7 @@ body {
     //background-color: $color-primary;
     background-color: #000;
     color: $color-primary-contrast;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 a {
     color: $color-secondary-contrast;

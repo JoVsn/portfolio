@@ -8,6 +8,7 @@ import { Contact } from "../../common";
 import { IAptitude } from "../../models/aptitudes";
 import aboutMeImg from "../../assets/imgs/about-me.jpeg";
 import aptitudeImg from "../../assets/imgs/shinjuku.jpeg";
+import usePrevious from "../../hooks/usePrevious";
 
 interface IProps {
     aptitudes: IAptitude[];
@@ -15,12 +16,32 @@ interface IProps {
 
 const About = ({ aptitudes }: IProps) => {
     const [aptitudeKey, setAptitudeKey] = useState<string>("");
+    const previousKey = usePrevious(aptitudeKey);
 
     useEffect(() => {
         document.title = `Jordan — About`;
         window.scrollTo(0, 0);
         if (aptitudes) setAptitudeKey(Object.keys(aptitudes)[0]);
     }, [aptitudes]);
+
+    useEffect(() => {
+        if (previousKey === "") setAptitudeContentHeight();
+        window.addEventListener("resize", setAptitudeContentHeight);
+        return () => {
+            window.removeEventListener("resize", setAptitudeContentHeight);
+        };
+    }, [aptitudeKey, previousKey]);
+
+    const setAptitudeContentHeight = () => {
+        const contentDescriptions: HTMLElement[] = Array.from(
+            document.querySelectorAll(".aptitudes-table-content-description"),
+        );
+        const maxValueOfY = Math.max(...contentDescriptions.map(o => o.clientHeight), 0);
+        const aptitudeTableContent: HTMLElement | null = document.querySelector(
+            ".aptitudes-table-content",
+        );
+        if (aptitudeTableContent) aptitudeTableContent.style.height = `${maxValueOfY.toString()}px`;
+    };
 
     const handleChangeAptitude = aptitudeKey => event => {
         setAptitudeKey(aptitudeKey);
@@ -94,12 +115,13 @@ const About = ({ aptitudes }: IProps) => {
                             <Fade bottom>
                                 <div className="aptitudes-table-indexes">
                                     {Object.keys(aptitudes).map(apKey => (
-                                        <span
-                                            key={`index_${apKey}`}
-                                            onClick={handleChangeAptitude(apKey)}
-                                            className={apKey === aptitudeKey ? "active" : ""}>
-                                            {aptitudes[apKey].title}
-                                        </span>
+                                        <div key={`index_${apKey}`}>
+                                            <span
+                                                onClick={handleChangeAptitude(apKey)}
+                                                className={apKey === aptitudeKey ? "active" : ""}>
+                                                {aptitudes[apKey].title}
+                                            </span>
+                                        </div>
                                     ))}
                                 </div>
                             </Fade>
@@ -117,12 +139,6 @@ const About = ({ aptitudes }: IProps) => {
                                         </div>
                                     </Fade>
                                 ))}
-                                {/* 
-                                <Fade bottom when={aptitudeKey}>
-                                    <div className="aptitudes-table-content-description active">
-                                        <p>{aptitudes[aptitudeKey].description}</p>
-                                    </div>
-                                </Fade> */}
                             </div>
                         </div>
                     </div>
@@ -131,7 +147,7 @@ const About = ({ aptitudes }: IProps) => {
 
             <div className="about-me-want-to-contact">
                 <Fade left>
-                <span>Want to contact me ?</span>
+                    <span>Want to contact me ?</span>
                 </Fade>
             </div>
             <div className="about-me-contact">

@@ -8,7 +8,7 @@ import ProjectsDisplayer from "../Projects/ProjectsDisplayer/ProjectsDisplayer";
 const Home = () => {
     return (
         <div className="Home">
-            <Fade bottom delay>
+            <Fade bottom>
                 <div className="home-cta-container">
                     <span className="home-cta-caption">
                         EXPLORE. DISCOVER. IMMERSE.

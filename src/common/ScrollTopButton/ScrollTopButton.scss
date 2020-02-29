@@ -4,11 +4,11 @@
     right: 2.5%;
     cursor: pointer;
     font-size: 1.3rem;
+    mix-blend-mode: difference;
     span {
         mix-blend-mode: difference;
         writing-mode: vertical-lr;
-        text-orientation: mixed;
-        opacity: 0.6;
+        opacity: 0.9;
         transition: opacity .25s ease-in-out;
         &:hover {
             opacity: 1;

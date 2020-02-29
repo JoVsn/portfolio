@@ -74,6 +74,7 @@
                     position: relative;
                     .aptitudes-table-content-description {
                         display: none;
+                        position: absolute;
                         &.active {
                             display: block;
                         }
@@ -115,7 +116,7 @@
             .main-content {
                 .presentation-caption {
                     font-size: 2rem;
-                    width: 90%;
+                    width: 100%;
                     margin-top: 256px;
                 }
                 .scrolldown-action {
@@ -133,7 +134,7 @@
             display: flex;
             flex-direction: column;
             .about-me-text {
-                width: 90%;
+                width: 80%;
                 margin: 48px auto;
                 .about-me-title {
                     font-size: 1.5rem;
@@ -156,7 +157,7 @@
             display: flex;
             flex-direction: column-reverse;
             .aptitudes-text {
-                width: 90%;
+                width: 80%;
                 margin: 48px auto;
                 .aptitudes-title {
                     font-size: 1.5rem;
@@ -165,11 +166,12 @@
                     .aptitudes-table-indexes {
                         margin-top: 24px;
                         margin: 0;
-                        span {
-                            display: block;
+                        div {
                             margin: 12px 0;
-                            font-size: 1.2rem;
-                            width: auto;
+                            span {
+                                font-size: 1.2rem;
+                                width: auto;
+                            }
                         }
                     }
                     .aptitudes-table-content {
@@ -225,7 +227,7 @@
             .main-content {
                 .presentation-caption {
                     font-size: 2.5rem;
-                    width: 90%;
+                    width: 95%;
                     margin-top: 256px;
                 }
                 .scrolldown-action {
@@ -243,7 +245,7 @@
             display: flex;
             flex-direction: column;
             .about-me-text {
-                width: 90%;
+                width: 80%;
                 margin: 48px auto;
                 .about-me-title {
                     font-size: 1.5rem;
@@ -266,7 +268,7 @@
             display: flex;
             flex-direction: column-reverse;
             .aptitudes-text {
-                width: 90%;
+                width: 80%;
                 margin: 48px auto;
                 .aptitudes-title {
                     font-size: 1.5rem;
@@ -358,7 +360,7 @@
             display: flex;
             flex-direction: column;
             .about-me-text {
-                width: 90%;
+                width: 80%;
                 margin: 0 auto;
                 height: 50vh;
                 display: flex;
@@ -385,7 +387,7 @@
             display: flex;
             flex-direction: column-reverse;
             .aptitudes-text {
-                width: 90%;
+                width: 80%;
                 margin: 0 auto;
                 height: 50vh;
                 display: flex;
@@ -406,7 +408,7 @@
                             &:last-child {
                                 margin-left: 8px;
                             }
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                         }
                     }
                     .aptitudes-table-content {
@@ -432,8 +434,6 @@
         }
 
         .about-me-want-to-contact {
-            background-color: #fff;
-            color: #000;
             height: 15vh;
             display: flex;
             align-items: center;
@@ -443,10 +443,9 @@
             }
         }
         .about-me-contact {
-            margin: 64px 0 128px 0;
+            margin: 0 0 92px 0;
             padding: 0 8%;
         }
-        
     }
 }
 
@@ -469,7 +468,7 @@
             .main-content {
                 .presentation-caption {
                     font-size: 3rem;
-                    width: 75%;
+                    width: 80%;
                     margin-top: 256px;
                 }
                 .scrolldown-action {
@@ -563,8 +562,6 @@
         }
 
         .about-me-want-to-contact {
-            background-color: #fff;
-            color: #000;
             height: 15vh;
             display: flex;
             align-items: center;
@@ -574,7 +571,7 @@
             }
         }
         .about-me-contact {
-            margin: 64px 0 128px 0;
+            margin: 0 0 128px 0;
             padding: 0 8%;
         }
     }

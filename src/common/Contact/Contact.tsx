@@ -6,27 +6,26 @@ import github_img from "../../assets/imgs/github.png";
 import youtube_img from "../../assets/imgs/youtube.png";
 
 const Contact = () => {
+    const handleRedirection = url => event => window.open(url, "_blank");
+
     return (
         <div className="Contact">
             <Fade bottom>
                 <div className="contact-container">
-                    <div className="contact-element">
+                    <div
+                        className="contact-element"
+                        onClick={handleRedirection("https://github.com/jovsn")}>
                         <img src={github_img} alt="Github" />
-                        <a
-                            href="https://github.com/jovsn"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <span>JoVsn</span>
-                        </a>
+                        <span>JoVsn</span>
                     </div>
-                    <div className="contact-element">
+                    <div
+                        className="contact-element"
+                        onClick={handleRedirection(
+                            "https://www.youtube.com/channel/UCKrU6OwA0CZ1Hgc5CMgxltw",
+                        )}>
                         <img src={youtube_img} alt="Youtube" />
-                        <a
-                            href="https://www.youtube.com/channel/UCKrU6OwA0CZ1Hgc5CMgxltw"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <span>Joordvn</span>
-                        </a>
+
+                        <span>Joordvn</span>
                     </div>
                 </div>
                 <div className="contact-mail">
