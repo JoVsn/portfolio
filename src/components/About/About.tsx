@@ -95,18 +95,22 @@ const About = ({ aptitudes }: IProps) => {
                         </p>
                     </div>
                 </Fade>
-                <div
-                    className="about-me-image-container"
-                    style={{ backgroundImage: `url(${aboutMeImg})` }}></div>
+                <div className="about-me-image-container">
+                    <div
+                        className="about-me-image"
+                        style={{ backgroundImage: `url(${aboutMeImg})` }}></div>
+                </div>
             </div>
 
             {/* <div className="separator"></div> */}
 
             {aptitudes && (
                 <div className="aptitudes-container">
-                    <div
-                        className="aptitudes-image-container"
-                        style={{ backgroundImage: `url(${aptitudeImg})` }}></div>
+                    <div className="aptitudes-image-container">
+                        <div
+                            className="aptitudes-image"
+                            style={{ backgroundImage: `url(${aptitudeImg})` }}></div>
+                    </div>
                     <div className="aptitudes-text">
                         <Fade bottom>
                             <h1 className="aptitudes-title">Aptitudes</h1>
