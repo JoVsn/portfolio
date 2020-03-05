@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { Fade } from "react-reveal";
 
 import "./Project.scss";
-import life_img from "../../../assets/imgs/life.png";
-import life_video from "../../../assets/videos/life.mp4";
 import playIcon from "../../../assets/imgs/play_icon.png";
 import { IMainProject } from "../../../models/project";
 
@@ -17,6 +15,7 @@ const Project = ({ project }: IProps) => {
         const video: HTMLMediaElement | null = document.querySelector(
             ".project-media-container video",
         );
+        if (project.type === "other") return;
         if (play && video) video.play();
         else if (!play && video) {
             video.pause();
@@ -46,6 +45,8 @@ const Project = ({ project }: IProps) => {
 
     if (!project) return <div>Loading ...</div>;
 
+    console.log(project);
+
     return (
         <>
             <div className="Project project-wrapper">
@@ -61,37 +62,40 @@ const Project = ({ project }: IProps) => {
                         onClick={handleRedirection(getRedirectLink(project.links).url)}>
                         <img
                             className="project-media-image"
-                            src={life_img}
+                            src={project.medias.thumbnailUrl}
                             onMouseOver={() => togglePlayVideo(true)}
                             onMouseOut={() => togglePlayVideo(false)}
                             alt={project.projectId}
                         />
-                        {project.type.toLowerCase() === "video" && (
-                            <>
-                                <video muted loop>
-                                    <source src={life_video} type="video/mp4" />
-                                </video>
-
-                                <div className="project-media-link in-video">
-                                    <img
-                                        className="project-media-link-img"
-                                        src={playIcon}
-                                        alt="Watch on Youtube"
-                                    />
-                                    <span className="project-media-link-caption">
-                                        {getRedirectLink(project.links).caption}
-                                    </span>
-                                </div>
-                            </>
+                        {project.type === "video" ? (
+                            <video className="project-media-displayed" muted loop>
+                                <source src={project.medias.mainUrl} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <img
+                                className="project-media-displayed"
+                                src={project.medias.thumbnailUrl}
+                                alt={project.projectId}
+                            />
                         )}
+                        <div className="project-media-link in-video">
+                            <img
+                                className="project-media-link-img"
+                                src={playIcon}
+                                alt="Watch on Youtube"
+                            />
+                            <span className="project-media-link-caption">
+                                {getRedirectLink(project.links).caption}
+                            </span>
+                        </div>
                     </div>
                 </Fade>
 
                 <Fade left>
                     <div className="project-description-container">
                         <div>
-                            <h2>Type</h2>
-                            <p>{project.type}</p>
+                            <h2>Genre</h2>
+                            <p>{project.genre}</p>
                         </div>
                         <div>
                             <h2>Client</h2>

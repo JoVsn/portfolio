@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import "./ProjectsDisplayer.scss";
 
-import life_img from "../../../assets/imgs/life.png";
 import { Link } from "react-router-dom";
 import { IMainProject } from "../../../models/project";
 
@@ -27,7 +26,7 @@ const ProjectsDisplayer = ({ projects, forHomepage }: IProps) => {
                             <div className={`ProjectElement`} key={project.projectId}>
                                 <Link to={`/project/${project.projectId}`}>
                                     <div className="img-container img-hover-zoom--brightness">
-                                        <img src={life_img} alt={project.name} />
+                                        <img src={project.medias.thumbnailUrl} alt={project.name} />
                                         <span>{project.name}</span>
                                     </div>
                                 </Link>

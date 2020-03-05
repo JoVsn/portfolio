@@ -11,7 +11,7 @@ export interface IMainProject extends IProject {
     tools: string;
     description: string;
     links: ILink[];
-    baseImageUrl: string;
+    medias: IMedias;
     onHomepage: boolean;
 }
 
@@ -22,6 +22,12 @@ export interface ILink {
     priority: IPriority;
 }
 
+export interface IMedias {
+    mainUrl: string;
+    thumbnailUrl: string;
+}
+
 export type IPriority = "main" | "secondary";
 
 export type IProjectType = "video" | "other";
+

@@ -2,7 +2,7 @@ let projects = {
     life: {
         projectId: "life",
         name: "Life",
-        type: "Video",
+        type: "video",
         genre: "Video",
         isMain: true,
         client: "IMAC - School Project",
@@ -14,11 +14,38 @@ let projects = {
                 url: "https://www.youtube.com/watch?v=ACfPy7o-Fnc",
                 caption: "Watch on YouTube",
                 active: true,
-                priority: "mainLink"
+                priority: "mainLink",
             },
         ],
-        baseImageUrl: "",
-        onHomepage: true
+        medias: {
+            mainUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/life.mp4",
+            thumbnailUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/life.png",
+        },
+        onHomepage: true,
+    },
+    shopping_assistant: {
+        projectId: "shopping_assistant",
+        name: "Shopping Assistant",
+        type: "other",
+        genre: "Mobile Application",
+        isMain: true,
+        client: "IMAC - School Project",
+        tools: "React Native, Firebase, NodeJS",
+        description:
+            'This is an application that allows you track stock and prices evolution accross multiple platforms such as Amazon, Boulanger, eBay, CDiscount, ...',
+        links: [
+            {
+                url: "https://shopping-assistant.app",
+                caption: "Visit the website",
+                active: true,
+                priority: "mainLink",
+            },
+        ],
+        medias: {
+            mainUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/shopping.png",
+            thumbnailUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/shopping.png",
+        },
+        onHomepage: true,
     },
 };
 
