@@ -13,6 +13,7 @@
             img {
                 width: 100%;
                 display: block;
+                opacity: 1;
 
                 filter: brightness(30%);
                 transition: transform 1s, filter 1.2s ease-in-out;

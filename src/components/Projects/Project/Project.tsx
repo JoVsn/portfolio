@@ -12,10 +12,10 @@ interface IProps {
 
 const Project = ({ project }: IProps) => {
     const togglePlayVideo = play => {
+        if (project.type === "other") return;
         const video: HTMLMediaElement | null = document.querySelector(
             ".project-media-container video",
         );
-        if (project.type === "other") return;
         if (play && video) video.play();
         else if (!play && video) {
             video.pause();
@@ -63,22 +63,18 @@ const Project = ({ project }: IProps) => {
                         className="project-media-container"
                         onClick={handleRedirection(getRedirectLink(project.links).url)}>
                         <img
-                            className="project-media-image"
+                            className={`project-media-image ${
+                                project.type === "video" ? "" : "project-media-thumbnail"
+                            }`}
                             src={project.medias.thumbnailUrl}
                             onMouseOver={() => togglePlayVideo(true)}
                             onMouseOut={() => togglePlayVideo(false)}
                             alt={project.projectId}
                         />
-                        {project.type === "video" ? (
+                        {project.type === "video" && (
                             <video className="project-media-displayed" muted loop>
                                 <source src={project.medias.mainUrl} type="video/mp4" />
                             </video>
-                        ) : (
-                            <img
-                                className="project-media-displayed"
-                                src={project.medias.thumbnailUrl}
-                                alt={project.projectId}
-                            />
                         )}
                         <div className="project-media-link in-video">
                             <img
