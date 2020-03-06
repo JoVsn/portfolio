@@ -27,7 +27,7 @@ export interface IMedias {
     thumbnailUrl: string;
 }
 
-export type IPriority = "main" | "secondary";
+export type IPriority = "primary" | "secondary";
 
 export type IProjectType = "video" | "other";
 

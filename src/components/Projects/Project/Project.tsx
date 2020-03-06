@@ -30,18 +30,20 @@ const Project = ({ project }: IProps) => {
             {project.links.map(
                 (link, idx) =>
                     link.active && (
-                        <span
-                            key={`link_${idx}`}
-                            className="project-link"
-                            onClick={handleRedirection(link.url)}>
-                            {link.caption}
-                        </span>
+                        <div>
+                            <span
+                                key={`link_${idx}`}
+                                className="project-link"
+                                onClick={handleRedirection(link.url)}>
+                                → {link.caption}
+                            </span>
+                        </div>
                     ),
             )}
         </div>
     );
 
-    const getRedirectLink = links => links.find(link => link.priority === "mainLink");
+    const getRedirectLink = links => links.find(link => link.priority === "primary");
 
     if (!project) return <div>Loading ...</div>;
 

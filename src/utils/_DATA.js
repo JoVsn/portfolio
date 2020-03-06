@@ -8,13 +8,19 @@ let projects = {
         client: "IMAC - School Project",
         tools: "Sony Vegas, After Effects, Premiere Pro",
         description:
-            'A title sequence for an eventual movie called "Life", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos.',
+            'A title sequence for a fictitious movie called "Life", for a school project. Made in association with Joris Oeuvray, we entirely produced the soundtrack and made the visual effects by compositing several videos.',
         links: [
             {
                 url: "https://www.youtube.com/watch?v=ACfPy7o-Fnc",
                 caption: "Watch on YouTube",
                 active: true,
-                priority: "mainLink",
+                priority: "primary",
+            },
+            {
+                url: "https://joris.oeuvray.fr/",
+                caption: "Joris Oeuvray's portfolio",
+                active: true,
+                priority: "secondary",
             },
         ],
         medias: {
@@ -38,7 +44,7 @@ let projects = {
                 url: "https://shopping-assistant.app",
                 caption: "Visit the website",
                 active: true,
-                priority: "mainLink",
+                priority: "primary",
             },
         ],
         medias: {

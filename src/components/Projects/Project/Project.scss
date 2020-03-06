@@ -37,7 +37,7 @@
         }
         img.project-media-displayed {
             width: 100%;
-            opacity: .5;
+            opacity: 0.5;
         }
 
         .project-media-link {
@@ -64,7 +64,6 @@
             }
             img.project-media-displayed {
                 transition: all 0.5s ease-in-out;
-
             }
             .project-media-link {
                 opacity: 1;
@@ -73,9 +72,17 @@
         }
     }
     .project-links-container {
-        .project-link {
-            cursor: pointer;
+        div {
             margin: 16px 0;
+
+            .project-link {
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                    color: #aaaaaa;
+                    transition: all 0.25s ease-in-out;
+                }
+            }
         }
     }
 }
