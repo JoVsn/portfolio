@@ -61,14 +61,14 @@ const Project = ({ project }: IProps) => {
                 <Fade bottom>
                     <div
                         className="project-media-container"
-                        onClick={handleRedirection(getRedirectLink(project.links).url)}>
+                        onClick={handleRedirection(getRedirectLink(project.links).url)}
+                        onMouseEnter={() => togglePlayVideo(true)}
+                        onMouseLeave={() => togglePlayVideo(false)}>
                         <img
                             className={`project-media-image ${
                                 project.type === "video" ? "" : "project-media-thumbnail"
                             }`}
                             src={project.medias.thumbnailUrl}
-                            onMouseOver={() => togglePlayVideo(true)}
-                            onMouseOut={() => togglePlayVideo(false)}
                             alt={project.projectId}
                         />
                         {project.type === "video" && (
