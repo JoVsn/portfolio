@@ -1,3 +1,8 @@
+.Footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 @media (max-width: 575.98px) {
     .Footer {
         font-size: 0.7rem;
@@ -5,7 +10,7 @@
     }
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .Footer {
         font-size: 1rem;
         margin: 40px 0;

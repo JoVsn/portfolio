@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import "./Header.scss";
-import "./luxbar.scss";
 
 const Header = () => {
     const history = useHistory();
@@ -38,10 +37,10 @@ const Header = () => {
                             onClick={openMenu}>
                             <span></span>
                         </div>
-                    </li>
+                    </li>{/* 
                     <li className="luxbar-item">
                         <Link to="/projects">Works</Link>
-                    </li>
+                    </li> */}
                     <li className="luxbar-item">
                         <Link to="/about">About</Link>
                     </li>
