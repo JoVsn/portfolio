@@ -17,10 +17,10 @@ const Header = () => {
         };
     }, [history]);
 
-    const openMenu = e => {
+/*     const openMenu = e => {
         const element: HTMLElement | null = document.querySelector(".luxbar-checkbox");
         if (element) element.click();
-    };
+    }; */
 
     return (
         <header id="luxbar" className="luxbar-static">
@@ -31,19 +31,19 @@ const Header = () => {
                         <Link to="/" className="luxbar-brand">
                             Joordvn
                         </Link>
-                        <div
+{/*                         <div
                             className="luxbar-hamburger luxbar-hamburger-spin"
                             id="luxbar-hamburger"
                             onClick={openMenu}>
                             <span></span>
-                        </div>
+                        </div> */}
                     </li>{/* 
                     <li className="luxbar-item">
                         <Link to="/projects">Works</Link>
-                    </li> */}
+                    </li>
                     <li className="luxbar-item">
                         <Link to="/about">About</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </header>

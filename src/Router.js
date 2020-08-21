@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { About, Home, Projects, MoreProjects, Project } from "./components";
+import { Home, Project } from "./components";
 
 import { TransitionHolder } from "./common/";
 import { handleInitialData } from "./actions/shared";
@@ -17,9 +17,6 @@ const Router = ({ dispatch, loading }) => {
     return (
         <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/more-projects" component={MoreProjects} />
             <Route path="/project/:projectId" component={Project} />
             <Route component={Home} />
         </Switch>

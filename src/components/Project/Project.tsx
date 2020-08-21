@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { Fade } from "react-reveal";
 
 import "./Project.scss";
-import playIcon from "../../../assets/imgs/play_icon.png";
-import { IMainProject } from "../../../models/project";
+import playIcon from "../../assets/imgs/play_icon.png";
+import { IMainProject } from "../../models/project";
 
 interface IProps {
     project: IMainProject;

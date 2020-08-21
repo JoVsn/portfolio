@@ -1,10 +1,40 @@
 .Home {
+    .home-introduction {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        height: calc(100vh - 58px - (24px * 2));
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .presentation-caption {
+                position: relative;
+                z-index: 999;
+            }
+            .scrolldown-actions {
+                cursor: pointer;
+                position: relative;
+                z-index: 999;
+            }
+        }
+    }
 }
 
 @media (max-width: 575.98px) {
     .Home {
-        min-height: calc(100vh - 58px - 99px - 64px - 128px);
-        padding: calc(128px + 58px) 0 64px 0;
+        .home-introduction {
+            padding: 0 10%;
+            .main-content {
+                .presentation-caption {
+                    font-size: 2rem;
+                    width: 100%;
+                }
+                .scrolldown-actions {
+                    margin-top: 24px;
+                }
+            }
+        }
         .home-cta-container {
             text-align: center;
             margin-bottom: 16px;
@@ -14,12 +44,31 @@
             }
         }
     }
+
+    .ProjectsDisplayer {
+        padding: 0 10%;
+        margin-top: 128px;
+    }
+    .Contact {
+        padding: 0 10%;
+        margin-top: 256px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .Home {
-        min-height: calc(100vh - 58px - 99px - 64px - 128px);
-        padding: calc(128px + 58px) 0 64px 0;
+        .home-introduction {
+            padding: 0 10%;
+            .main-content {
+                .presentation-caption {
+                    font-size: 2.5rem;
+                    width: 95%;
+                }
+                .scrolldown-actions {
+                    margin-top: 24px;
+                }
+            }
+        }
         .home-cta-container {
             text-align: center;
             margin-bottom: 16px;
@@ -29,14 +78,31 @@
             }
         }
     }
+    .ProjectsDisplayer {
+        padding: 0 10%;
+        margin-top: 128px;
+    }
+    .Contact {
+        padding: 0 10%;
+        margin-top: 256px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .Home {
-        min-height: calc(100vh - 106px - 99px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        .home-introduction {
+            padding: 0 10%;
+            height: calc(100vh - 106px);
+            .main-content {
+                .presentation-caption {
+                    font-size: 2.5rem;
+                    width: 90%;
+                }
+                .scrolldown-actions {
+                    margin-top: 24px;
+                }
+            }
+        }
         .home-cta-container {
             padding: 0 10%;
             margin-bottom: 16px;
@@ -46,14 +112,31 @@
             }
         }
     }
+    .ProjectsDisplayer {
+        margin-top: 128px;
+        padding: 0 10%;
+    }
+    .Contact {
+        padding: 0 10%;
+        margin-top: 256px;
+    }
 }
 
 @media (min-width: 992px) {
     .Home {
-        min-height: calc(100vh - 106px - 99px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        .home-introduction {
+            padding: 0 15%;
+            height: calc(100vh - 106px);
+            .main-content {
+                .presentation-caption {
+                    font-size: 3rem;
+                    width: 80%;
+                }
+                .scrolldown-actions {
+                    margin-top: 24px;
+                }
+            }
+        }
         .home-cta-container {
             padding: 0 10%;
             margin-bottom: 16px;
@@ -62,5 +145,13 @@
                 font-size: 1.8rem;
             }
         }
+    }
+    .ProjectsDisplayer {
+        padding: 0 15%;
+        margin-top: 128px;
+    }
+    .Contact {
+        padding: 0 15%;
+        margin-top: 256px;
     }
 }

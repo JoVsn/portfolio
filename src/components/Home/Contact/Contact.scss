@@ -1,35 +1,41 @@
 .Contact {
-    display: flex;
-    align-items: center;
-    .contact-element {
+    .contact-container {
         display: flex;
         align-items: center;
-        cursor: pointer;
+        .contact-medias-element {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
 
-        img {
-        }
-        span {
-        }
-        &:hover {
             img {
             }
             span {
-                color: #aaaaaa;
+            }
+            &:hover {
+                img {
+                }
+                span {
+                    color: #aaaaaa;
+                }
             }
         }
-    }
-    .contact-mail {
-        .contact-slash {
-            font-weight: bold;
-        }
-        span {
+        .contact-mail {
+            .contact-slash {
+                font-weight: bold;
+            }
+            span {
+            }
         }
     }
 }
 
 @media (max-width: 575.98px) {
-    .Contact {
-        .contact-element {
+    .contact-caption {
+        font-size: 1.3rem;
+    }
+    .contact-container {
+        margin-top: 32px;
+        .contact-medias-element {
             margin: 8px 0;
 
             img {
@@ -55,8 +61,12 @@
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .Contact {
-        .contact-element {
+    .contact-caption {
+        font-size: 1.5rem;
+    }
+    .contact-container {
+        margin-top: 32px;
+        .contact-medias-element {
             img {
                 width: 24px;
                 height: 24px;
@@ -80,8 +90,12 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .Contact {
-        .contact-element {
+    .contact-caption {
+        font-size: 2rem;
+    }
+    .contact-container {
+        margin-top: 32px;
+        .contact-medias-element {
             img {
                 width: 32x;
                 height: 32px;
@@ -105,8 +119,12 @@
 }
 
 @media (min-width: 992px) {
-    .Contact {
-        .contact-element {
+    .contact-caption {
+        font-size: 2rem;
+    }
+    .contact-container {
+        margin-top: 32px;
+        .contact-medias-element {
             img {
                 width: 32x;
                 height: 32px;
