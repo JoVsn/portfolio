@@ -1,0 +1,114 @@
+.home-introduction {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 58px - (24px * 2));
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .presentation-caption {
+            position: relative;
+            z-index: 999;
+        }
+        .scrolldown-actions {
+            cursor: pointer;
+            position: relative;
+            z-index: 999;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .home-introduction {
+        padding: 0 10%;
+        .main-content {
+            .presentation-caption {
+                font-size: 2rem;
+                width: 100%;
+            }
+            .scrolldown-actions {
+                margin-top: 24px;
+            }
+        }
+    }
+    .home-cta-container {
+        text-align: center;
+        margin-bottom: 16px;
+        .home-cta-caption {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .home-introduction {
+        padding: 0 10%;
+        .main-content {
+            .presentation-caption {
+                font-size: 2.5rem;
+                width: 95%;
+            }
+            .scrolldown-actions {
+                margin-top: 24px;
+            }
+        }
+    }
+    .home-cta-container {
+        text-align: center;
+        margin-bottom: 16px;
+        .home-cta-caption {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .home-introduction {
+        padding: 0 10%;
+        height: calc(100vh - 106px);
+        .main-content {
+            .presentation-caption {
+                font-size: 2.5rem;
+                width: 90%;
+            }
+            .scrolldown-actions {
+                margin-top: 24px;
+            }
+        }
+    }
+    .home-cta-container {
+        padding: 0 10%;
+        margin-bottom: 16px;
+        .home-cta-caption {
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .home-introduction {
+        padding: 0 15%;
+        height: calc(100vh - 106px);
+        .main-content {
+            .presentation-caption {
+                font-size: 3rem;
+                width: 80%;
+            }
+            .scrolldown-actions {
+                margin-top: 24px;
+            }
+        }
+    }
+    .home-cta-container {
+        padding: 0 10%;
+        margin-bottom: 16px;
+        .home-cta-caption {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+    }
+}

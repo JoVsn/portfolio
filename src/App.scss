@@ -1,0 +1,14 @@
+@import "styles/_base";
+
+html,
+body {
+    height: 100%;
+}
+
+.App {
+    a,
+    a:visited,
+    a:active {
+        text-decoration: none;
+    }
+}
