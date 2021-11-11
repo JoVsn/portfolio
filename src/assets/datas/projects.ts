@@ -14,20 +14,20 @@ export const projects: IMainProject[] = [
         links: [
             {
                 url: "https://papmobile.fr/",
-                caption: "PAP Mobile",
+                caption: "Visiter le site",
                 active: true,
                 priority: "primary",
             },
             {
-                url: "https://www.youtube.com/watch?v=ACfPy7o-Fnc",
-                caption: "Watch on YouTube",
+                url: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/maquettes_pap_mobile.pdf",
+                caption: "Maquettes (lien PDF)",
                 active: true,
                 priority: "secondary",
             },
         ],
         medias: {
-            mainUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/life.mp4",
-            thumbnailUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/life.png",
+            mainUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/papmobile.png",
+            thumbnailUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/papmobile.png",
         },
         onHomepage: true,
     },
@@ -61,7 +61,7 @@ export const projects: IMainProject[] = [
         },
         onHomepage: true,
     },
-    {
+/*     {
         projectId: "shopping_assistant",
         name: "Shopping Assistant",
         type: "other",
@@ -84,5 +84,5 @@ export const projects: IMainProject[] = [
             thumbnailUrl: "https://joordvn-portfolio.s3.eu-west-3.amazonaws.com/shopping.png",
         },
         onHomepage: true,
-    },
+    }, */
 ];

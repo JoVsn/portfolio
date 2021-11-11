@@ -97,7 +97,6 @@
         }
         h1 {
             text-align: center;
-            margin: 8px 0;
         }
         .project-media-container {
             width: 100%;
@@ -124,7 +123,7 @@
         }
 
         .project-description-container {
-            margin: 16px auto;
+            margin: 32px auto;
             div {
                 width: auto;
                 padding: 0 15% 0 5%;
@@ -152,7 +151,6 @@
         }
         h1 {
             text-align: center;
-            margin: 8px 0;
         }
         .project-media-container {
             width: 100%;
@@ -179,7 +177,7 @@
         }
 
         .project-description-container {
-            margin: 16px auto;
+            margin: 32px auto;
             div {
                 width: auto;
                 padding: 0 15% 0 5%;
@@ -207,7 +205,6 @@
         }
         h1 {
             text-align: center;
-            margin: 8px 0;
         }
         .project-media-container {
             width: 100%;
@@ -235,8 +232,8 @@
 
         .project-description-container {
             display: flex;
-            width: 80%;
             margin: 64px auto;
+            padding: 0 10%;
             div {
                 width: 20%;
                 margin: 0 16px;
@@ -252,9 +249,9 @@
             }
         }
         .project-content-container {
-            width: 80%;
-            margin: 64px auto;
             font-size: 1.2rem;
+            margin: 64px auto;
+            padding: 0 10%;
         }
     }
 }
@@ -271,7 +268,7 @@
             margin: 64px 0;
         }
         .project-media-container {
-            width: 85%;
+            width: 70%;
             margin: 64px auto;
             .project-media-link {
                 left: 32px;
@@ -290,8 +287,8 @@
 
         .project-description-container {
             display: flex;
-            width: 80%;
             margin: 64px auto;
+            padding: 0 15%;
             div {
                 width: 20%;
                 margin: 0 16px;
@@ -307,10 +304,9 @@
             }
         }
         .project-content-container {
-            width: 80%;
-            margin: 64px auto;
             font-size: 1.2rem;
-            padding: 0 5%;
+            margin: 64px auto;
+            padding: 0 15%;
         }
     }
 }
